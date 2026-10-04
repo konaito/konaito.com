@@ -41,12 +41,20 @@
 .publication-y-tick{right:calc(100% + 10px);transform:translateY(-50%)}
 .publication-x-tick{top:calc(100% + 13px);transform:translateX(-50%);white-space:nowrap}
 .publication-x-tick.start{transform:none}.publication-x-tick.end{transform:translateX(-100%)}
-.publication-point{position:absolute;width:24px;height:24px;padding:0;border:0;border-radius:50%;background:none;transform:translate(-50%,-50%);cursor:pointer;color:var(--ink);line-height:1}
+.publication-point{position:absolute;width:24px;height:24px;padding:0;border:0;border-radius:50%;background:none;transform:translate(-50%,-50%);cursor:pointer;color:var(--publication-color,var(--ink));line-height:1}
 .publication-point span{display:block;width:6px;height:6px;margin:auto;border-radius:50%;background:currentColor;pointer-events:none}
-.publication-point.is-active{color:var(--link);z-index:1}
+.publication-point.is-active{z-index:1}
 .publication-point.is-active span{width:8px;height:8px;box-shadow:0 0 0 3px #fff}
 .publication-point:focus-visible{outline:2px solid var(--link);outline-offset:-2px;z-index:2}
 .publication-tooltip{position:absolute;z-index:3;max-width:min(340px,calc(100% - 16px));padding:10px 12px;background:var(--ink);color:#fff;border-radius:3px;box-shadow:0 2px 7px #00000014;overflow-wrap:anywhere;font-size:12px;line-height:1.7}
 .publication-tooltip[hidden]{display:none}
 .publication-tooltip-meta{font-size:10px;color:#d4d4d4;margin-bottom:3px;font-variant-numeric:tabular-nums}
 @media(max-width:600px){.publication-chart{margin-bottom:30px}.publication-plot{height:180px;margin-top:20px}.publication-chart-help{font-size:10px}.publication-tooltip{max-width:calc(100% - 16px)}}
+
+.publication-legend{list-style:none;display:flex;flex-wrap:wrap;gap:5px 16px;margin:10px 0 0;padding:0;color:var(--muted);font-size:11px;line-height:1.5}
+.publication-legend li{display:flex;align-items:center;gap:5px}
+.publication-legend span{width:6px;height:6px;border-radius:50%;background:var(--publication-color);flex:none}
+@media(max-width:600px){.publication-legend{gap:5px 12px;font-size:10px}}
+
+.entry-content .entry-categories{font-size:11px;line-height:1.8;color:var(--muted);margin-top:9px}
+.entry-categories span{padding:0 4px;color:#999}

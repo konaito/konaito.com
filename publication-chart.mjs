@@ -1,7 +1,13 @@
-import { jstDate } from './article-model.mjs';
+import { jstDate, categoryNames } from './article-model.mjs';
 
 const escapeHTML = value => String(value).replace(/[&<>"']/g, character => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[character]));
 const percent = value => Number(value.toFixed(6));
+export const publicationGenres = {
+  work: { label: categoryNames.work, color: '#285691' },
+  life: { label: categoryNames.life, color: '#a54c12' },
+  society: { label: categoryNames.society, color: '#75458a' },
+  experiment: { label: categoryNames.experiment, color: '#267052' }
+};
 
 // One point per canonical work, ordered by the earliest verified publication instant.
 export function publicationSeries(articles) {
@@ -11,7 +17,7 @@ export function publicationSeries(articles) {
       throw new Error(`The publication chart requires verified absolute timestamps: ${article.id}`);
     }
     const timestamp = Math.min(...sources.map(source => Date.parse(source.publishedTimestamp)));
-    return { id: article.id, title: article.title, timestamp, date: jstDate(new Date(timestamp).toISOString()) };
+    return { id: article.id, title: article.title, primaryCategory: article.primaryCategory, categories: article.categories, timestamp, date: jstDate(new Date(timestamp).toISOString()) };
   }).sort((a, b) => a.timestamp - b.timestamp || a.id.localeCompare(b.id, 'en'))
     .map((point, index) => ({ ...point, ordinal: index + 1 }));
 }
@@ -38,10 +44,13 @@ export function renderPublicationChart(articles) {
   }
   if (end !== start) dateTicks.push({ timestamp: end, label: points.at(-1).date.slice(0, 7).replace('-', '.'), edge: 'end' });
   const dates = dateTicks.map(tick => `<span class="publication-x-tick ${tick.edge}" style="left:${percent((tick.timestamp - start) / span * 100)}%">${tick.label}</span>`).join('');
-  const dots = points.map((point, index) => `<button type="button" class="publication-point" style="left:${point.x}%;top:${point.y}%" data-publication-point data-title="${escapeHTML(point.title)}" data-date="${point.date}" data-ordinal="${point.ordinal}" data-article-id="${escapeHTML(point.id)}" tabindex="${index === 0 ? '0' : '-1'}" aria-label="${point.ordinal}本目、${point.date.replaceAll('-', '.')}、${escapeHTML(point.title)}" aria-describedby="publication-chart-help"><span></span></button>`).join('\n');
+  if (points.some(point => !publicationGenres[point.primaryCategory])) throw new Error('Unknown publication chart genre');
+  const legend = Object.entries(publicationGenres).map(([theme, genre]) => `<li><span style="--publication-color:${genre.color}" aria-hidden="true"></span>${genre.label}</li>`).join('');
+  const dots = points.map((point, index) => `<button type="button" class="publication-point" style="left:${point.x}%;top:${point.y}%;--publication-color:${publicationGenres[point.primaryCategory].color}" data-publication-point data-genre="${publicationGenres[point.primaryCategory].label}" data-primary-category="${point.primaryCategory}" data-title="${escapeHTML(point.title)}" data-date="${point.date}" data-ordinal="${point.ordinal}" data-article-id="${escapeHTML(point.id)}" tabindex="${index === 0 ? '0' : '-1'}" aria-label="${point.ordinal}本目、${point.date.replaceAll('-', '.')}、${publicationGenres[point.primaryCategory].label}、${escapeHTML(point.title)}" aria-describedby="publication-chart-help"><span></span></button>`).join('\n');
   return `<figure class="publication-chart" aria-labelledby="publication-chart-heading">
   <figcaption id="publication-chart-heading">公開の記録<span>${series.length}本</span></figcaption>
   <p class="publication-chart-help" id="publication-chart-help">横軸は初出の時期、縦軸は何本目か。点に触れると作品名を表示します。<span class="visually-hidden">キーボードでは矢印キーで作品を選び、Escapeキーで閉じられます。</span></p>
+  <ul class="publication-legend" aria-label="ジャンル">${legend}</ul>
   <div class="publication-plot">
     <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false"><g class="publication-grid">${grid}</g><polyline class="publication-line" points="${points.map(point => `${point.x},${point.y}`).join(' ')}" vector-effect="non-scaling-stroke"/></svg>
     ${labels}${dates}${dots}

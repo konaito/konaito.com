@@ -1,7 +1,7 @@
 const select=document.getElementById('theme-select');
-const articles=document.querySelectorAll('[data-theme]');
+const articles=document.querySelectorAll('[data-categories]');
 const status=document.getElementById('filter-status');
-select.addEventListener('change',()=>{let count=0;for(const article of articles){const visible=select.value==='all'||article.dataset.theme===select.value;article.hidden=!visible;if(visible)count++;}status.textContent=`${select.selectedOptions[0].textContent}：${count}本の記事を表示しています。`;});
+select.addEventListener('change',()=>{let count=0;for(const article of articles){const visible=select.value==='all'||article.dataset.categories.split(' ').includes(select.value);article.hidden=!visible;if(visible)count++;}status.textContent=`${select.selectedOptions[0].textContent}：${count}本の記事を表示しています。`;});
 
 const chart=document.querySelector('.publication-chart');
 if(chart){
@@ -28,11 +28,11 @@ if(chart){
     if(!point)return;
     if(active!==point){
       active?.classList.remove('is-active');
-      active?.removeAttribute('aria-describedby');
+      active?.setAttribute('aria-describedby','publication-chart-help');
       active=point;
       active.classList.add('is-active');
       active.setAttribute('aria-describedby','publication-tooltip');
-      meta.textContent=`${point.dataset.date.replaceAll('-','.')} · ${point.dataset.ordinal}本目`;
+      meta.textContent=`${point.dataset.date.replaceAll('-','.')} · ${point.dataset.ordinal}本目 · ${point.dataset.genre}`;
       title.textContent=point.dataset.title;
     }
     tooltip.hidden=false;

@@ -1,5 +1,6 @@
 export const platformOrder = ['note', 'X', 'Qiita'];
 export const displayTimezone = 'Asia/Tokyo';
+export const categoryNames = { work:'AIと仕事', life:'人間と暮らし', society:'社会と未来', experiment:'技術を試す' };
 
 export function jstDate(timestamp) {
   if (typeof timestamp!=='string' || !/(?:Z|[+-]\d{2}:\d{2})$/.test(timestamp) || Number.isNaN(Date.parse(timestamp))) throw new Error(`Invalid absolute publication timestamp: ${timestamp}`);
@@ -18,7 +19,9 @@ export function prepareArticles(input) {
   return input.map(article => {
     if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(article.id || '') || ids.has(article.id)) throw new Error(`Duplicate or missing article id: ${article.id}`);
     ids.add(article.id);
-    if (!article.title || !article.summary || !['work','life','society','experiment'].includes(article.theme)) throw new Error(`Incomplete content entry or unknown theme: ${article.id}`);
+    if (!article.title || !article.summary) throw new Error(`Incomplete content entry: ${article.id}`);
+    if (!Array.isArray(article.categories) || !article.categories.length || new Set(article.categories).size !== article.categories.length || article.categories.some(category => !Object.hasOwn(categoryNames, category))) throw new Error(`Invalid categories: ${article.id}`);
+    if (!article.categories.includes(article.primaryCategory)) throw new Error(`Primary category must be in categories: ${article.id}`);
     if (!Array.isArray(article.sources) || !article.sources.length) throw new Error(`Missing provenance: ${article.id}`);
     const sources = article.sources.map(source => {
       if (!platformOrder.includes(source.platform)) throw new Error(`Unknown platform: ${source.platform}`);

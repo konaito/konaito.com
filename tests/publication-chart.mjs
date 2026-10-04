@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { publicationSeries, renderPublicationChart } from '../publication-chart.mjs';
+import { publicationSeries, renderPublicationChart, publicationGenres } from '../publication-chart.mjs';
 const input=JSON.parse(fs.readFileSync(new URL('../articles.json',import.meta.url),'utf8'));
 const series=publicationSeries(input);
 assert.equal(series.length,31);
@@ -23,13 +23,13 @@ assert.ok(rendered.includes(html));
 assert.equal([...html.matchAll(/data-publication-point\b/g)].length,31);
 assert.equal([...html.matchAll(/tabindex="0"/g)].length,1);
 assert.ok(html.includes('role="tooltip" hidden'));
-const coordinates=[...html.matchAll(/style="left:([\d.]+)%;top:([\d.]+)%" data-publication-point/g)].map(match=>[Number(match[1]),Number(match[2])]);
+const coordinates=[...html.matchAll(/style="left:([\d.]+)%;top:([\d.]+)%;--publication-color:#[a-f0-9]+" data-publication-point/g)].map(match=>[Number(match[1]),Number(match[2])]);
 assert.equal(coordinates.length,31);
 for(const [index,[x,y]] of coordinates.entries()){
   assert.ok(Math.abs(x-(series[index].timestamp-series[0].timestamp)/(series.at(-1).timestamp-series[0].timestamp)*100)<.000001,'Horizontal position is proportional to elapsed time');
   assert.ok(Math.abs(y-(100-(index+1)/35*100))<.000001,'Vertical position is the ordinal');
 }
-const sample=(id,date)=>({id,title:'<script> & "quoted"',sources:[{publishedAtVerified:true,publishedTimestamp:date}]});
+const sample=(id,date)=>({id,primaryCategory:'work',categories:['work'],title:'<script> & "quoted"',sources:[{publishedAtVerified:true,publishedTimestamp:date}]});
 const ties=[sample('z','2026-01-01T00:00:00Z'),sample('a','2026-01-01T00:00:00Z')];
 assert.deepEqual(publicationSeries(ties).map(point=>point.id),['a','z']);
 assert.deepEqual(publicationSeries(ties.reverse()).map(point=>point.id),['a','z']);
@@ -40,3 +40,13 @@ assert.ok(!renderPublicationChart([sample('one','2026-01-01T00:00:00Z')]).includ
 assert.throws(()=>publicationSeries([{id:'missing',sources:[]}]),/verified absolute timestamps/);
 assert.throws(()=>publicationSeries([sample('bad','2026-01-01')]),/verified absolute timestamps/);
 console.log('Publication chart: 31 verified chronological points, real-time spacing, exact timestamp ties, safe markup, and keyboard entry passed.');
+
+for(const point of series){
+  const genre=publicationGenres[point.primaryCategory];
+  assert.ok(genre);
+  assert.ok(html.includes(`data-genre="${genre.label}"`));
+  assert.ok(html.includes(`--publication-color:${genre.color}`));
+}
+assert.equal(Object.keys(publicationGenres).length,4);
+assert.ok(html.includes('class="publication-legend" aria-label="ジャンル"'));
+console.log('All four existing article genres have labelled, colored points and a text legend.');

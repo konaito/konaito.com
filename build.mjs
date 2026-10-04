@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
-import { prepareArticles } from './article-model.mjs';
+import { prepareArticles, categoryNames } from './article-model.mjs';
 import { readArticleContent } from './content-model.mjs';
 import { formatArticleBody } from './article-format.mjs';
 import { renderPublicationChart } from './publication-chart.mjs';
@@ -42,12 +42,12 @@ const titleHTML=a=>{
 };
 const articlePath=id=>`articles/${id}/`;
 const articleHref=a=>bodyById.has(a.id)?local(articlePath(a.id)):a.primarySourceUrl;
-const themeNames={work:'AIと仕事',life:'人間と暮らし',society:'社会と未来',experiment:'技術を試す'};
+const themeNames=categoryNames;
 const person={'@type':'Person','@id':absolute('#author'),name:'内藤剛汰',alternateName:'konaito',url:'https://konaito.github.io/',sameAs:['https://github.com/konaito','https://note.com/konaito','https://x.com/konaito_copilot','https://qiita.com/konaito']};
 const website={'@type':'WebSite','@id':absolute('#website'),url:siteUrl,name:'konaito',alternateName:'konaito — 文章と記録',inLanguage:'ja',publisher:{'@id':person['@id']}};
 const rows=articles.map(a=>{
   const sourceLinks=a.sources.map(source=>`<a class="source-link" href="${esc(source.url)}" target="_blank" rel="noopener noreferrer"${source.publishedAtVerified?` title="公開日：${esc(date(source.publishedAt))}（日本時間）"`:''} aria-label="${esc(a.title)}を${esc(source.label||source.platform)}で読む">${esc(source.label||source.platform)}</a>`).join('<span class="source-divider" aria-hidden="true">/</span>');
-  return `<article class="article-entry" id="${esc(a.id)}" data-theme="${esc(a.theme)}"><time datetime="${esc(a.earliestPublishedAt)}" title="最初の公開日（日本時間）">${esc(date(a.earliestPublishedAt))}</time><div class="entry-content"><h2 class="balanced-title"><a href="${esc(articleHref(a))}">${titleHTML(a)}</a></h2><p>${esc(a.summary)}</p><div class="source-links" aria-label="掲載元"><span class="source-caption">掲載元${a.sources.length>1?`（${a.sources.length}）`:''}</span>${sourceLinks}</div></div></article>`;
+  return `<article class="article-entry" id="${esc(a.id)}" data-categories="${esc(a.categories.join(' '))}"><time datetime="${esc(a.earliestPublishedAt)}" title="最初の公開日（日本時間）">${esc(date(a.earliestPublishedAt))}</time><div class="entry-content"><h2 class="balanced-title"><a href="${esc(articleHref(a))}">${titleHTML(a)}</a></h2><p>${esc(a.summary)}</p><p class="entry-categories" aria-label="カテゴリ">${[a.primaryCategory,...a.categories.filter(category=>category!==a.primaryCategory)].map(category=>esc(categoryNames[category])).join('<span aria-hidden="true"> / </span>')}</p><div class="source-links" aria-label="掲載元"><span class="source-caption">掲載元${a.sources.length>1?`（${a.sources.length}）`:''}</span>${sourceLinks}</div></div></article>`;
 }).join('\n');
 const template=read('template.html');
 function render({title,description,relative='',content,graph=[],notFound=false,script=false,imageId='index',imageAlt='konaito — 文章と記録'}){
@@ -71,13 +71,13 @@ for(const a of readableArticles){
   const pageTitle=`${a.title} | konaito`;
   const description=a.summary;
   const sourceList=a.sources.map(s=>`<li><a href="${esc(s.url)}">${esc(s.label||s.platform)}の掲載版</a><span>公開：<time datetime="${esc(s.publishedTimestamp)}">${date(s.publishedAt)}</time>（日本時間）</span></li>`).join('');
-  const relatedArticles=readableArticles.filter(other=>other.id!==a.id && other.theme===a.theme).slice(0,3);
+  const relatedArticles=readableArticles.filter(other=>other.id!==a.id && other.primaryCategory===a.primaryCategory).slice(0,3);
   const related=relatedArticles.map(target=>`<li><a href="${esc(local(articlePath(target.id)))}">${esc(target.title)}</a><p>${esc(target.summary)}</p></li>`).join('');
   const toc=body.toc?.length?`<details class="table-of-contents"><summary>目次</summary><ol>${body.toc.filter(h=>h.level<=3).map(h=>`<li class="toc-level-${h.level}"><a href="#${esc(h.id)}">${esc(h.text)}</a></li>`).join('')}</ol></details>`:'';
   const source=body.sourceUrl;
   const preferredPlatform=a.sources.find(s=>s.url===source).platform;
-  const content=`<nav class="breadcrumbs" aria-label="パンくず"><a href="${local('')}">記事一覧</a><span aria-hidden="true"> / </span><span>${themeNames[a.theme]}</span></nav>
-<article class="reading-page"><header class="article-header"><p class="eyebrow">${themeNames[a.theme]}</p><h1 class="balanced-title">${titleHTML(a)}</h1><p class="publication"><a href="https://konaito.github.io/" rel="author">konaito</a><span aria-hidden="true"> · </span>初出 <time datetime="${a.earliestPublishedAt}">${date(a.earliestPublishedAt)}</time></p><p class="source-edition"><a href="${esc(source)}">${preferredPlatform}掲載版</a>の本文を収録</p></header>
+  const content=`<nav class="breadcrumbs" aria-label="パンくず"><a href="${local('')}">記事一覧</a><span aria-hidden="true"> / </span><span>${themeNames[a.primaryCategory]}</span></nav>
+<article class="reading-page"><header class="article-header"><p class="eyebrow">${themeNames[a.primaryCategory]}</p><h1 class="balanced-title">${titleHTML(a)}</h1><p class="publication"><a href="https://konaito.github.io/" rel="author">konaito</a><span aria-hidden="true"> · </span>初出 <time datetime="${a.earliestPublishedAt}">${date(a.earliestPublishedAt)}</time></p><p class="source-edition"><a href="${esc(source)}">${preferredPlatform}掲載版</a>の本文を収録</p></header>
 ${toc}<div class="article-body">${formatArticleBody(body)}</div>
 <section class="article-provenance" aria-labelledby="sources"><h2 id="sources">掲載元</h2><ul class="publication-sources">${sourceList}</ul><p class="summary-note">初出・各掲載版の日付は日本時間です。このサイトへの本文掲載：<time datetime="${esc(config.articlePublicationDate)}">${date(config.articlePublicationDate)}</time>。本文は取得時点の掲載版です。原文の段落・見出しをもとに表示し、外部プレーヤーなどの埋め込みは掲載元へのリンクで案内しています。</p></section>
 <section class="related-section" aria-labelledby="related"><h2 id="related">あわせて読む</h2><ul class="related-reading">${related}</ul></section><p class="back-link"><a href="${local('')}#${a.id}">記事一覧に戻る</a><a href="#top">先頭へ戻る</a></p></article>`;

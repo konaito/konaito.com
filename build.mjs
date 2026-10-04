@@ -1,0 +1,21 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { prepareArticles } from './article-model.mjs';
+const root=path.dirname(new URL(import.meta.url).pathname);
+const config=JSON.parse(fs.readFileSync(path.join(root,'site.config.json'),'utf8'));
+const siteUrl=process.env.SITE_URL || config.siteUrl;
+if(new URL(siteUrl).protocol!=='https:') throw new Error('SITE_URL must use HTTPS.');
+const articles=prepareArticles(JSON.parse(fs.readFileSync(path.join(root,'articles.json'),'utf8')));
+const esc=x=>String(x).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const date=x=>x.replaceAll('-','.');
+const rows=articles.map(a=>{
+  const sourceLinks=a.sources.map(source=>`<a class="source-link" href="${esc(source.url)}" target="_blank" rel="noopener noreferrer"${source.publishedAtVerified?` title="公開日：${esc(date(source.publishedAt))}（日本時間）"`:''} aria-label="${esc(a.title)}を${esc(source.label||source.platform)}で読む">${esc(source.label||source.platform)}</a>`).join('<span class="source-divider" aria-hidden="true">/</span>');
+  return `<article class="article-entry" id="${esc(a.id)}" data-theme="${esc(a.theme)}"><time datetime="${esc(a.earliestPublishedAt)}" title="最初の公開日（日本時間）">${esc(date(a.earliestPublishedAt))}</time><div class="entry-content"><h2><a href="${esc(a.primarySourceUrl)}" target="_blank" rel="noopener noreferrer">${esc(a.title)}</a></h2><p>${esc(a.summary)}</p><div class="source-links" aria-label="掲載元"><span class="source-caption">掲載元${a.sources.length>1?`（${a.sources.length}）`:''}</span>${sourceLinks}</div></div></article>`;
+}).join('\n');
+const html=fs.readFileSync(path.join(root,'template.html'),'utf8').replace('<!--ARTICLE_CARDS-->',rows).replaceAll('{{SITE_URL}}',esc(siteUrl.replace(/\/$/,''))).replaceAll('{{ROBOTS}}',config.indexable?'index,follow':'noindex,nofollow');
+fs.mkdirSync(path.join(root,'dist'),{recursive:true});
+for (const name of ['style.css','script.js']) fs.copyFileSync(path.join(root,'assets',name),path.join(root,'dist',name));
+fs.writeFileSync(path.join(root,'dist/.nojekyll'),'');
+fs.writeFileSync(path.join(root,'dist/index.html'),html);
+fs.writeFileSync(path.join(root,'dist/robots.txt'),config.indexable?'User-agent: *\nAllow: /\n':'User-agent: *\nDisallow: /\n');
+console.log(`Built ${articles.length} articles.`);

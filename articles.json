@@ -1,0 +1,748 @@
+[
+  {
+    "id": "capitalism-socialism",
+    "title": "AIは資本主義と社会主義の勝敗を決めるのか",
+    "theme": "society",
+    "summary": "米中のAI競争を、制度の単純な二択ではなく、資本・半導体・人材を知能へ変える仕組みの競争として読み解く。",
+    "priority": 1,
+    "primarySourceUrl": "https://x.com/konaito_copilot/status/2106462292913373479",
+    "sources": [
+      {
+        "platform": "X",
+        "label": "X",
+        "url": "https://x.com/konaito_copilot/status/2106462292913373479",
+        "publishedAt": "2026-10-04",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2026-10-04T04:12:01+09:00",
+        "modifiedTimestamp": null
+      },
+      {
+        "platform": "Qiita",
+        "label": "Qiita",
+        "url": "https://qiita.com/konaito/items/6f7b698ceabf740c850f",
+        "publishedAt": "2026-10-04",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2026-10-04T04:05:49+09:00",
+        "modifiedTimestamp": "2026-10-04T04:05:49+09:00"
+      }
+    ],
+    "earliestPublishedAt": "2026-10-04"
+  },
+  {
+    "id": "love-or-money",
+    "title": "愛か金かはAIにも決められる。人間に残される仕事",
+    "theme": "work",
+    "summary": "判断や目的設定までAIが担う可能性を考え、Jevを手がかりに、人間が価値を引き受けることと責任の所在を問い直す。",
+    "priority": 2,
+    "primarySourceUrl": "https://note.com/konaito/n/n0b838ded3cd1",
+    "sources": [
+      {
+        "platform": "note",
+        "label": "note",
+        "url": "https://note.com/konaito/n/n0b838ded3cd1",
+        "publishedAt": "2026-10-04",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2026-10-04T02:53:05+09:00",
+        "modifiedTimestamp": "2026-10-04T02:53:05+09:00"
+      },
+      {
+        "platform": "X",
+        "label": "X",
+        "url": "https://x.com/konaito_copilot/status/2106444001096417432",
+        "publishedAt": "2026-10-04",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2026-10-04T02:59:20+09:00",
+        "modifiedTimestamp": null
+      }
+    ],
+    "earliestPublishedAt": "2026-10-04"
+  },
+  {
+    "id": "love",
+    "title": "愛を伝えるだとか",
+    "theme": "life",
+    "summary": "AIが考える仕事を引き受ける時代に、「自分で考えて相手に届ける」意味を、贈り物や家族との時間から問い直す。",
+    "priority": 3,
+    "primarySourceUrl": "https://note.com/konaito/n/n873e3164f4d7",
+    "sources": [
+      {
+        "platform": "note",
+        "label": "note",
+        "url": "https://note.com/konaito/n/n873e3164f4d7",
+        "publishedAt": "2026-09-11",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2026-09-11T03:10:04+09:00",
+        "modifiedTimestamp": "2026-09-11T03:10:04+09:00"
+      },
+      {
+        "platform": "X",
+        "label": "X",
+        "url": "https://x.com/konaito_copilot/status/2098349903344963710",
+        "publishedAt": "2026-09-11",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2026-09-11T18:56:17+09:00",
+        "modifiedTimestamp": null
+      }
+    ],
+    "earliestPublishedAt": "2026-09-11"
+  },
+  {
+    "id": "chiikawa",
+    "title": "シンギュラリティ後の世界は、ちいかわ",
+    "theme": "society",
+    "summary": "『ちいかわ』の社会を手がかりに、知的労働が売り物でなくなった後の労働・分配・格差を考える。",
+    "priority": 4,
+    "primarySourceUrl": "https://note.com/konaito/n/n7d59cd70785b",
+    "sources": [
+      {
+        "platform": "note",
+        "label": "note",
+        "url": "https://note.com/konaito/n/n7d59cd70785b",
+        "publishedAt": "2026-08-19",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2026-08-19T01:22:24+09:00",
+        "modifiedTimestamp": "2026-08-19T01:22:24+09:00"
+      },
+      {
+        "platform": "X",
+        "label": "X",
+        "url": "https://x.com/konaito_copilot/status/2089744633756807524",
+        "publishedAt": "2026-08-19",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2026-08-19T01:02:00+09:00",
+        "modifiedTimestamp": null
+      }
+    ],
+    "earliestPublishedAt": "2026-08-19"
+  },
+  {
+    "id": "fde-chat-api",
+    "title": "FDEが作る成果物は、ChatAPIであるべきだ",
+    "theme": "experiment",
+    "summary": "FDEが残すべきものを、個別の業務画面ではなく、企業のデータ・権限・業務ロジックをつないだ構造として捉える。その構造へ自然言語で触れるChat APIを提案する。",
+    "priority": 5,
+    "primarySourceUrl": "https://x.com/konaito_copilot/status/2083428394755330205",
+    "sources": [
+      {
+        "platform": "X",
+        "label": "X",
+        "url": "https://x.com/konaito_copilot/status/2083428394755330205",
+        "publishedAt": "2026-08-01",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2026-08-01T14:43:32+09:00",
+        "modifiedTimestamp": null
+      },
+      {
+        "platform": "Qiita",
+        "label": "Qiita",
+        "url": "https://qiita.com/konaito/items/7c421d21d082f12ec873",
+        "publishedAt": "2026-10-04",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2026-10-04T02:30:20+09:00",
+        "modifiedTimestamp": "2026-10-04T02:30:20+09:00"
+      }
+    ],
+    "earliestPublishedAt": "2026-08-01"
+  },
+  {
+    "id": "friction",
+    "title": "動摩擦が0になった世界-人間は摩擦になる-",
+    "theme": "work",
+    "summary": "AIが思考と実装の抵抗を減らす一方で、人が動き始めるための意思はどうなるのか。動摩擦と静止摩擦の比喩で、仕事と主体性を考える。",
+    "priority": 6,
+    "primarySourceUrl": "https://note.com/konaito/n/n462350144ef1",
+    "sources": [
+      {
+        "platform": "note",
+        "label": "note",
+        "url": "https://note.com/konaito/n/n462350144ef1",
+        "publishedAt": "2026-05-07",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2026-05-07T01:23:26+09:00",
+        "modifiedTimestamp": "2026-05-13T01:57:47+09:00"
+      },
+      {
+        "platform": "X",
+        "label": "X",
+        "url": "https://x.com/konaito_copilot/status/2052265035687473159",
+        "publishedAt": "2026-05-07",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2026-05-07T14:51:28+09:00",
+        "modifiedTimestamp": null
+      }
+    ],
+    "earliestPublishedAt": "2026-05-07"
+  },
+  {
+    "id": "seeing",
+    "title": "「考える」なんてAIにやらせろ、人間の仕事は「見る」ことだ",
+    "theme": "work",
+    "summary": "選択肢を広げる「考える」と、選び取る「見る」を分け、AIとの共同作業における人間の役割を考察する。",
+    "priority": 7,
+    "primarySourceUrl": "https://note.com/konaito/n/n7269d554c702",
+    "sources": [
+      {
+        "platform": "note",
+        "label": "note",
+        "url": "https://note.com/konaito/n/n7269d554c702",
+        "publishedAt": "2026-04-23",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2026-04-23T10:39:24+09:00",
+        "modifiedTimestamp": "2026-04-23T10:54:52+09:00"
+      },
+      {
+        "platform": "X",
+        "label": "X",
+        "url": "https://x.com/konaito_copilot/status/2047131766637678862",
+        "publishedAt": "2026-04-23",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2026-04-23T10:53:41+09:00",
+        "modifiedTimestamp": null
+      }
+    ],
+    "earliestPublishedAt": "2026-04-23"
+  },
+  {
+    "id": "agi-assimilation",
+    "title": "AGIという死滅回遊後の「同化」〜サム・アルトマン＝夏油傑・羂索、ダリオ・アモデイ＝九十九由基、イーロン・マスク＝五条悟〜",
+    "theme": "society",
+    "summary": "AGIへの「同化」を『呪術廻戦』の人物像と重ね、身体知や違和感、個人の執着が持つ価値を考える。",
+    "priority": 8,
+    "primarySourceUrl": "https://note.com/konaito/n/n22563a310ea6",
+    "sources": [
+      {
+        "platform": "note",
+        "label": "note",
+        "url": "https://note.com/konaito/n/n22563a310ea6",
+        "publishedAt": "2026-04-20",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2026-04-20T02:08:45+09:00",
+        "modifiedTimestamp": "2026-04-20T03:36:42+09:00"
+      },
+      {
+        "platform": "X",
+        "label": "X",
+        "url": "https://x.com/konaito_copilot/status/2045963946063237485",
+        "publishedAt": "2026-04-20",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2026-04-20T05:33:11+09:00",
+        "modifiedTimestamp": null
+      }
+    ],
+    "earliestPublishedAt": "2026-04-20"
+  },
+  {
+    "id": "agi-pill",
+    "title": "今のうちに絶望しておこう、AGIピル",
+    "theme": "life",
+    "summary": "成果や承認がAIに代替される前に、何に価値を置くのか。結果を得ることから、過程そのものを楽しむことへ視点を移す。",
+    "priority": 9,
+    "primarySourceUrl": "https://note.com/konaito/n/n4203d3d77c2f",
+    "sources": [
+      {
+        "platform": "note",
+        "label": "note",
+        "url": "https://note.com/konaito/n/n4203d3d77c2f",
+        "publishedAt": "2026-03-20",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2026-03-20T23:42:16+09:00",
+        "modifiedTimestamp": "2026-03-20T23:42:16+09:00"
+      },
+      {
+        "platform": "X",
+        "label": "X",
+        "url": "https://x.com/konaito_copilot/status/2035002673653834178",
+        "publishedAt": "2026-03-20",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2026-03-20T23:37:00+09:00",
+        "modifiedTimestamp": null
+      }
+    ],
+    "earliestPublishedAt": "2026-03-20"
+  },
+  {
+    "id": "friends",
+    "title": "友達ショート — 制作コスト0の世界で、私たちは何を失うのか",
+    "theme": "life",
+    "summary": "一人ひとりに最適化された体験が増えると、誰かと同じものを味わう時間はどう変わるのか。料理人の父との会話から、友人関係と共通体験を考える。",
+    "priority": 10,
+    "primarySourceUrl": "https://note.com/konaito/n/na883f2b0a2a5",
+    "sources": [
+      {
+        "platform": "note",
+        "label": "note",
+        "url": "https://note.com/konaito/n/na883f2b0a2a5",
+        "publishedAt": "2026-03-12",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2026-03-12T12:58:52+09:00",
+        "modifiedTimestamp": "2026-06-07T00:42:33+09:00"
+      },
+      {
+        "platform": "X",
+        "label": "X",
+        "url": "https://x.com/konaito_copilot/status/2031938715858452920",
+        "publishedAt": "2026-03-12",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2026-03-12T12:41:56+09:00",
+        "modifiedTimestamp": null
+      }
+    ],
+    "earliestPublishedAt": "2026-03-12"
+  },
+  {
+    "id": "last-effort",
+    "title": "AGI前にする、人生最後の努力",
+    "theme": "life",
+    "summary": "技能や成果物の価値が変わるなかで、何を自分で経験しておきたいのか。効率では測れない努力と身近な人との時間を振り返る。",
+    "priority": 11,
+    "primarySourceUrl": "https://note.com/konaito/n/n65fc897493a4",
+    "sources": [
+      {
+        "platform": "note",
+        "label": "note",
+        "url": "https://note.com/konaito/n/n65fc897493a4",
+        "publishedAt": "2026-03-12",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2026-03-12T12:56:58+09:00",
+        "modifiedTimestamp": "2026-09-11T01:04:16+09:00"
+      },
+      {
+        "platform": "X",
+        "label": "X",
+        "url": "https://x.com/konaito_copilot/status/2031615002327834731",
+        "publishedAt": "2026-03-11",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2026-03-11T15:15:36+09:00",
+        "modifiedTimestamp": null
+      }
+    ],
+    "earliestPublishedAt": "2026-03-11"
+  },
+  {
+    "id": "genius-hermit-original",
+    "title": "仙人と天才",
+    "theme": "life",
+    "summary": "変わりゆく時代に賭ける「天才」と、長く変わらない学問や身体へ向かう「仙人」。時間との向き合い方から生き方を考える。",
+    "priority": 12,
+    "primarySourceUrl": "https://note.com/konaito/n/n4c09a8c7c093",
+    "sources": [
+      {
+        "platform": "note",
+        "label": "note",
+        "url": "https://note.com/konaito/n/n4c09a8c7c093",
+        "publishedAt": "2026-03-12",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2026-03-12T12:54:46+09:00",
+        "modifiedTimestamp": "2026-03-12T12:54:46+09:00"
+      },
+      {
+        "platform": "X",
+        "label": "X",
+        "url": "https://x.com/konaito_copilot/status/2030328700793966709",
+        "publishedAt": "2026-03-08",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2026-03-08T02:04:18+09:00",
+        "modifiedTimestamp": null
+      }
+    ],
+    "earliestPublishedAt": "2026-03-08"
+  },
+  {
+    "id": "new-multitasking",
+    "title": "シン・多動力 -ADHDがAIエージェント時代を生きるための教科書-",
+    "theme": "work",
+    "summary": "AIエージェントが思いつきから実行までの距離を縮めると、多動性はどう変わるのか。行動と仕事の進め方を考える。",
+    "priority": 13,
+    "primarySourceUrl": "https://note.com/konaito/n/nce9964fcf712",
+    "sources": [
+      {
+        "platform": "note",
+        "label": "note",
+        "url": "https://note.com/konaito/n/nce9964fcf712",
+        "publishedAt": "2026-03-05",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2026-03-05T11:04:58+09:00",
+        "modifiedTimestamp": "2026-03-05T11:04:58+09:00"
+      },
+      {
+        "platform": "X",
+        "label": "X",
+        "url": "https://x.com/konaito_copilot/status/2028814894095843466",
+        "publishedAt": "2026-03-03",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2026-03-03T21:48:58+09:00",
+        "modifiedTimestamp": null
+      }
+    ],
+    "earliestPublishedAt": "2026-03-03"
+  },
+  {
+    "id": "exponential-ai",
+    "title": "AIの「指数関数的進化」は、LINEのネットワーク効果とは別次元だ",
+    "theme": "society",
+    "summary": "AIの能力の進歩と、人が増えることで価値が高まるネットワーク効果を区別し、普及の仕組みや速度の違いを考える。",
+    "priority": 14,
+    "primarySourceUrl": "https://x.com/konaito_copilot/status/2020408800822595665",
+    "sources": [
+      {
+        "platform": "X",
+        "label": "X",
+        "url": "https://x.com/konaito_copilot/status/2020408800822595665",
+        "publishedAt": "2026-02-08",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2026-02-08T17:06:10+09:00",
+        "modifiedTimestamp": null
+      }
+    ],
+    "earliestPublishedAt": "2026-02-08"
+  },
+  {
+    "id": "agents-state",
+    "title": "生成AIとAIエージェントの違い #OpenClaw #moltbook",
+    "theme": "experiment",
+    "summary": "継続する記憶・資産・目的という「状態」に注目し、生成AIと自律的に動くエージェントの違いを論じる。",
+    "priority": 15,
+    "primarySourceUrl": "https://note.com/konaito/n/n7afe40a9a1e8",
+    "sources": [
+      {
+        "platform": "note",
+        "label": "note",
+        "url": "https://note.com/konaito/n/n7afe40a9a1e8",
+        "publishedAt": "2026-02-01",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2026-02-01T14:51:11+09:00",
+        "modifiedTimestamp": "2026-02-01T14:51:11+09:00"
+      },
+      {
+        "platform": "X",
+        "label": "X",
+        "url": "https://x.com/konaito_copilot/status/2017827362004733963",
+        "publishedAt": "2026-02-01",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2026-02-01T14:08:27+09:00",
+        "modifiedTimestamp": null
+      }
+    ],
+    "earliestPublishedAt": "2026-02-01"
+  },
+  {
+    "id": "complex-society",
+    "title": "複雑な社会を、複雑なまま捉えよう",
+    "theme": "society",
+    "summary": "複雑な社会を無理に単純化せず扱う可能性を、AIと数学から考える。予測と理解を分け、研究や学びへの向き合い方を見つめ直す。",
+    "priority": 16,
+    "primarySourceUrl": "https://note.com/konaito/n/nf053632e18bd",
+    "sources": [
+      {
+        "platform": "note",
+        "label": "note",
+        "url": "https://note.com/konaito/n/nf053632e18bd",
+        "publishedAt": "2026-04-11",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2026-04-11T03:48:27+09:00",
+        "modifiedTimestamp": "2026-04-11T03:48:27+09:00"
+      }
+    ],
+    "earliestPublishedAt": "2026-04-11"
+  },
+  {
+    "id": "genius-hermit",
+    "title": "仙人と天才 v2",
+    "theme": "life",
+    "summary": "変わりゆくものに賭ける「天才」と、不変を見つめる「仙人」。能力の優劣ではなく、時間との向き合い方から生き方を考える。",
+    "priority": 17,
+    "primarySourceUrl": "https://note.com/konaito/n/n11a2a7168266",
+    "sources": [
+      {
+        "platform": "note",
+        "label": "note",
+        "url": "https://note.com/konaito/n/n11a2a7168266",
+        "publishedAt": "2026-03-26",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2026-03-26T19:52:49+09:00",
+        "modifiedTimestamp": "2026-04-04T21:00:54+09:00"
+      }
+    ],
+    "earliestPublishedAt": "2026-03-26"
+  },
+  {
+    "id": "communication-redefined",
+    "title": "コミュニケーションの再定義——SaaSからエージェントへ、クラウドワークスからMoltworkへ",
+    "theme": "work",
+    "summary": "自分で操作するSaaSから、意図を会話で伝えて仕事を委ねるエージェントへ。便利さとともに、人間が考える機会の変化を考える。",
+    "priority": 18,
+    "primarySourceUrl": "https://note.com/konaito/n/nbaf40af6742f",
+    "sources": [
+      {
+        "platform": "note",
+        "label": "note",
+        "url": "https://note.com/konaito/n/nbaf40af6742f",
+        "publishedAt": "2026-03-24",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2026-03-24T15:32:54+09:00",
+        "modifiedTimestamp": "2026-03-24T15:32:54+09:00"
+      }
+    ],
+    "earliestPublishedAt": "2026-03-24"
+  },
+  {
+    "id": "exchange",
+    "title": "何でもするから飯をくれ——交換の席がなくなる世界で",
+    "theme": "society",
+    "summary": "AIが人の技能を代替し、対価として差し出せるものが減ったらどうなるのか。交換と贈与の議論から、人が社会に参加する条件を問う。",
+    "priority": 19,
+    "primarySourceUrl": "https://note.com/konaito/n/n63a80f0ba3bd",
+    "sources": [
+      {
+        "platform": "note",
+        "label": "note",
+        "url": "https://note.com/konaito/n/n63a80f0ba3bd",
+        "publishedAt": "2026-03-24",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2026-03-24T15:30:58+09:00",
+        "modifiedTimestamp": "2026-03-24T15:30:58+09:00"
+      }
+    ],
+    "earliestPublishedAt": "2026-03-24"
+  },
+  {
+    "id": "new-graduates",
+    "title": "AIが奪う「新卒の仕事」──アメリカの警告は、日本の未来か？",
+    "theme": "work",
+    "summary": "米国の雇用をめぐる報道を入口に、AIが若手の業務と学ぶ機会へ与える影響を考察する。",
+    "priority": 20,
+    "primarySourceUrl": "https://note.com/konaito/n/n898155031d36",
+    "sources": [
+      {
+        "platform": "note",
+        "label": "note",
+        "url": "https://note.com/konaito/n/n898155031d36",
+        "publishedAt": "2025-07-09",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2025-07-09T12:45:13+09:00",
+        "modifiedTimestamp": "2025-07-09T12:45:13+09:00"
+      }
+    ],
+    "earliestPublishedAt": "2025-07-09"
+  },
+  {
+    "id": "desired-jobs",
+    "title": "みんなのやりたい仕事の未来 #学歴 #品質スタンプ #運 #責任",
+    "theme": "work",
+    "summary": "知的な成果をAIが作るとき、学歴や専門性に支払われる対価は何へ変わるのか。「運」と「責任」を軸に仕事の構造を捉え直す。",
+    "priority": 21,
+    "primarySourceUrl": "https://note.com/konaito/n/nce6c033404fb",
+    "sources": [
+      {
+        "platform": "note",
+        "label": "note",
+        "url": "https://note.com/konaito/n/nce6c033404fb",
+        "publishedAt": "2025-04-26",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2025-04-26T07:29:00+09:00",
+        "modifiedTimestamp": "2025-04-26T08:09:45+09:00"
+      }
+    ],
+    "earliestPublishedAt": "2025-04-26"
+  },
+  {
+    "id": "twenties-forties",
+    "title": "20代はおしまい，40代ははじまり -AI時代への絶望-",
+    "theme": "work",
+    "summary": "リサーチや実行をAIが担うようになると、若手はどこで経験を積むのか。下積みと意思決定の関係から、キャリアの変化を考える。",
+    "priority": 22,
+    "primarySourceUrl": "https://note.com/konaito/n/n6b191d831312",
+    "sources": [
+      {
+        "platform": "note",
+        "label": "note",
+        "url": "https://note.com/konaito/n/n6b191d831312",
+        "publishedAt": "2025-02-13",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2025-02-13T13:29:55+09:00",
+        "modifiedTimestamp": "2025-02-13T18:58:11+09:00"
+      }
+    ],
+    "earliestPublishedAt": "2025-02-13"
+  },
+  {
+    "id": "how-we-live",
+    "title": "AIによりプログラミングというスキルが陳腐化されていくこの世界で「僕たちはどう生きるか」",
+    "theme": "work",
+    "summary": "プログラミングを学び、起業した経験から、AIによる技能の陳腐化と、その先に育みたい感性・教養を考える。連作の出発点となる文章。",
+    "priority": 23,
+    "primarySourceUrl": "https://note.com/konaito/n/n2f8cc400fdbb",
+    "sources": [
+      {
+        "platform": "note",
+        "label": "note",
+        "url": "https://note.com/konaito/n/n2f8cc400fdbb",
+        "publishedAt": "2025-01-10",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2025-01-10T18:00:13+09:00",
+        "modifiedTimestamp": "2025-02-13T10:25:15+09:00"
+      }
+    ],
+    "earliestPublishedAt": "2025-01-10"
+  },
+  {
+    "id": "hacking",
+    "title": "日本企業「ハッキングされないでくれ」ランキング",
+    "theme": "society",
+    "summary": "情報漏洩を、件数や金銭被害だけでなく、失われる生活や取り返しのつかなさから考える。企業が何を預かり、何を残す必要があるのかを問う。",
+    "priority": 24,
+    "primarySourceUrl": "https://qiita.com/konaito/items/16a6d2c5da7d144efe95",
+    "sources": [
+      {
+        "platform": "Qiita",
+        "label": "Qiita",
+        "url": "https://qiita.com/konaito/items/16a6d2c5da7d144efe95",
+        "publishedAt": "2026-10-02",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2026-10-02T19:12:24+09:00",
+        "modifiedTimestamp": "2026-10-02T22:45:04+09:00"
+      }
+    ],
+    "earliestPublishedAt": "2026-10-02"
+  },
+  {
+    "id": "jev-definer",
+    "title": "Jevは「判断するAI」そのものになれるか？Decisions APIとDiffusionGemmaが突きつける問い",
+    "theme": "experiment",
+    "summary": "TypeSafeのJevを題材に、新しい技術の先駆者と、その使い方の標準を定める存在の違いを考える。モデル・インターフェース・事業を分けて競争を捉える。",
+    "priority": 25,
+    "primarySourceUrl": "https://qiita.com/konaito/items/05455b1d184df9861b14",
+    "sources": [
+      {
+        "platform": "Qiita",
+        "label": "Qiita",
+        "url": "https://qiita.com/konaito/items/05455b1d184df9861b14",
+        "publishedAt": "2026-09-30",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2026-09-30T03:30:18+09:00",
+        "modifiedTimestamp": "2026-09-30T04:36:45+09:00"
+      }
+    ],
+    "earliestPublishedAt": "2026-09-30"
+  },
+  {
+    "id": "knowledge-space",
+    "title": "AIエージェントに「事前知識」を与える — コンテキスト圧縮に耐える知識空間の設計",
+    "theme": "experiment",
+    "summary": "AIエージェントが必要な知識を見つけ直せるよう、目次と小さな参考資料を組み合わせる設計を紹介する。コンテキストの制約と知識の再利用を両立させる試み。",
+    "priority": 26,
+    "primarySourceUrl": "https://qiita.com/konaito/items/0e034d7528d8b0bad3a4",
+    "sources": [
+      {
+        "platform": "Qiita",
+        "label": "Qiita",
+        "url": "https://qiita.com/konaito/items/0e034d7528d8b0bad3a4",
+        "publishedAt": "2026-03-15",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2026-03-15T19:02:32+09:00",
+        "modifiedTimestamp": "2026-03-15T19:02:32+09:00"
+      }
+    ],
+    "earliestPublishedAt": "2026-03-15"
+  },
+  {
+    "id": "web2md",
+    "title": "Webページを高品質なMarkdownに変換するサービス「Web2MD」β版リリース",
+    "theme": "experiment",
+    "summary": "Webページから本文を取り出してMarkdownに変換し、AIへ渡す情報を整えるサービスの開発背景と使い方を紹介する。",
+    "priority": 27,
+    "primarySourceUrl": "https://qiita.com/konaito/items/c0fa5d6560187054e73a",
+    "sources": [
+      {
+        "platform": "Qiita",
+        "label": "Qiita",
+        "url": "https://qiita.com/konaito/items/c0fa5d6560187054e73a",
+        "publishedAt": "2025-07-28",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2025-07-28T05:46:04+09:00",
+        "modifiedTimestamp": "2025-07-28T05:46:04+09:00"
+      }
+    ],
+    "earliestPublishedAt": "2025-07-28"
+  },
+  {
+    "id": "supabase-docker",
+    "title": "DockerでのSupabaseのローカル環境構築",
+    "theme": "experiment",
+    "summary": "SupabaseをDocker Composeで動かすためのローカル環境構築を紹介。必要なサービスと依存関係、起動やデータの永続化を整理する。",
+    "priority": 28,
+    "primarySourceUrl": "https://qiita.com/konaito/items/1d2366bc548758699dbe",
+    "sources": [
+      {
+        "platform": "Qiita",
+        "label": "Qiita",
+        "url": "https://qiita.com/konaito/items/1d2366bc548758699dbe",
+        "publishedAt": "2024-12-20",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2024-12-20T06:25:45+09:00",
+        "modifiedTimestamp": "2024-12-20T07:29:38+09:00"
+      }
+    ],
+    "earliestPublishedAt": "2024-12-20"
+  },
+  {
+    "id": "pokemon-onchain",
+    "title": "もし『Pokémon Trading Card Game Pocket（ポケポケ）』がオンチェーン化されたら？",
+    "theme": "experiment",
+    "summary": "ポケポケをオンチェーン化した場合を仮定し、カードの所有や貸出、ロイヤリティ、運営参加の仕組みと課題を考える。",
+    "priority": 29,
+    "primarySourceUrl": "https://qiita.com/konaito/items/74b4082811194d7e0678",
+    "sources": [
+      {
+        "platform": "Qiita",
+        "label": "Qiita",
+        "url": "https://qiita.com/konaito/items/74b4082811194d7e0678",
+        "publishedAt": "2024-12-11",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2024-12-11T01:20:06+09:00",
+        "modifiedTimestamp": "2024-12-12T03:11:39+09:00"
+      }
+    ],
+    "earliestPublishedAt": "2024-12-11"
+  },
+  {
+    "id": "bun-nextjs-docker",
+    "title": "Bunで構築したNext.jsアプリケーションをDockerで立ち上げる",
+    "theme": "experiment",
+    "summary": "Bunで構築したNext.jsアプリをDockerで動かす手順を紹介。ARM環境、SWC、除外ファイルや開発時の再読込みを扱う。",
+    "priority": 30,
+    "primarySourceUrl": "https://qiita.com/konaito/items/2a6a5e58b1bbf755f4f4",
+    "sources": [
+      {
+        "platform": "Qiita",
+        "label": "Qiita",
+        "url": "https://qiita.com/konaito/items/2a6a5e58b1bbf755f4f4",
+        "publishedAt": "2024-10-14",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2024-10-14T08:40:55+09:00",
+        "modifiedTimestamp": "2024-10-17T22:38:16+09:00"
+      }
+    ],
+    "earliestPublishedAt": "2024-10-14"
+  },
+  {
+    "id": "build-working-app",
+    "title": "とりあえず動くアプリを作る方法",
+    "theme": "experiment",
+    "summary": "とりあえず動くアプリを作るために、Webやモバイルの開発手段とバックエンドの選び方を、実際の経験から紹介する。",
+    "priority": 31,
+    "primarySourceUrl": "https://qiita.com/konaito/items/8157b2128f39f756d41b",
+    "sources": [
+      {
+        "platform": "Qiita",
+        "label": "Qiita",
+        "url": "https://qiita.com/konaito/items/8157b2128f39f756d41b",
+        "publishedAt": "2023-12-18",
+        "publishedAtVerified": true,
+        "publishedTimestamp": "2023-12-18T17:20:16+09:00",
+        "modifiedTimestamp": "2023-12-21T21:46:07+09:00"
+      }
+    ],
+    "earliestPublishedAt": "2023-12-18"
+  }
+]

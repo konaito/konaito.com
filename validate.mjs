@@ -41,3 +41,9 @@ articles.forEach((article,i)=>{
   }
 });
 console.log(JSON.stringify({contentEntries:articles.length,sourceLinks:urls.length,multipleSourceEntries:articles.filter(a=>a.sources.length>1).length,sourceOrder:platformOrder,displayTimezone:'Asia/Tokyo',earliestVerifiedDates:true,noDuplicateSourceURLs:true,previousCoveragePreserved:!!baselinePath,auditedSourceCoverage,renderedLinksAndDates:true,validAnchorsAndIds:true},null,2));
+
+const {validateSEO}=await import('./tests/seo.mjs');
+validateSEO();
+await import('./tests/model.mjs');
+const {validateSocialAssets}=await import('./tests/social-assets.mjs');
+validateSocialAssets();

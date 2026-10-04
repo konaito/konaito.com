@@ -1,4 +1,6 @@
 {
   "siteUrl": "https://konaito.com",
-  "indexable": true
+  "indexable": true,
+  "articlePublicationDate": "2026-10-04",
+  "externalOnlyArticles": []
 }

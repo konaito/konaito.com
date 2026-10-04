@@ -3,38 +3,37 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>konaito — 文章と記録</title>
-  <meta name="description" content="konaitoの記事一覧。note、X、Qiitaに掲載した文章と技術の記録。">
+  <title>{{PAGE_TITLE}}</title>
+  <meta name="description" content="{{DESCRIPTION}}">
   <meta name="robots" content="{{ROBOTS}}">
   <meta name="theme-color" content="#ffffff">
-  <link rel="canonical" href="{{SITE_URL}}/">
+  {{CANONICAL_TAG}}
   <meta property="og:type" content="website">
-  <meta property="og:title" content="konaito — 文章と記録">
-  <meta property="og:description" content="note、X、Qiitaに掲載した文章と技術の記録。">
+  <meta property="og:url" content="{{CANONICAL_URL}}">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="konaito">
+  <meta name="twitter:card" content="{{TWITTER_CARD}}">
+  {{SOCIAL_IMAGE}}
+  <meta name="twitter:title" content="{{PAGE_TITLE}}">
+  <meta name="twitter:description" content="{{DESCRIPTION}}">
+  <meta name="twitter:creator" content="@konaito_copilot">
+  <meta name="author" content="内藤剛汰（konaito）">
+  <meta property="og:title" content="{{PAGE_TITLE}}">
+  <meta property="og:description" content="{{DESCRIPTION}}">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='white'/%3E%3Cpath d='M18 13v38h7V36l14 15h10L31 30l17-17H38L25 26V13z' fill='%23222222'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="./style.css">
-  <script src="./script.js" defer></script>
+  <link rel="stylesheet" href="{{STYLE_URL}}">
+  {{PAGE_SCRIPT}}
+  {{STRUCTURED_DATA}}
 </head>
 <body>
-  <a class="skip-link" href="#articles">記事一覧へ</a>
+  <a class="skip-link" href="#main-content">本文へ</a>
   <div class="page">
     <header class="site-header" id="top">
-      <div class="masthead"><a class="site-name" href="#top">konaito</a><nav aria-label="掲載先"><a href="https://note.com/konaito" target="_blank" rel="noopener noreferrer">note</a><a href="https://x.com/konaito_copilot/articles" target="_blank" rel="noopener noreferrer">X</a><a href="https://qiita.com/konaito" target="_blank" rel="noopener noreferrer">Qiita</a></nav></div>
+      <div class="masthead"><a class="site-name" href="{{HOME_PATH}}">konaito</a><nav aria-label="掲載先"><a href="https://note.com/konaito" target="_blank" rel="noopener noreferrer">note</a><a href="https://x.com/konaito_copilot/articles" target="_blank" rel="noopener noreferrer">X</a><a href="https://qiita.com/konaito" target="_blank" rel="noopener noreferrer">Qiita</a></nav></div>
       <p class="site-description">文章と記録</p>
-      <p class="author-links">書き手：<a href="https://konaito.github.io/">内藤剛汰（konaito）のプロフィール</a><span aria-hidden="true"> · </span>仕事：<a href="https://fybe.jp/">合同会社FYBE.jp</a></p>
+      <p class="author-links">書き手：<a href="https://konaito.github.io/">内藤剛汰（konaito）のプロフィール</a><span aria-hidden="true"> · </span>仕事：<a href="https://www.fybe.jp/">合同会社FYBE.jp</a></p>
     </header>
-    <main>
-      <details class="reading-guide">
-        <summary>はじめて読む方へ</summary>
-        <ol><li><a href="https://note.com/konaito/n/n873e3164f4d7" target="_blank" rel="noopener noreferrer">愛を伝えるだとか</a></li><li><a href="https://note.com/konaito/n/n462350144ef1" target="_blank" rel="noopener noreferrer">動摩擦が0になった世界-人間は摩擦になる-</a></li><li><a href="https://note.com/konaito/n/n7269d554c702" target="_blank" rel="noopener noreferrer">「考える」なんてAIにやらせろ、人間の仕事は「見る」ことだ</a></li></ol>
-      </details>
-      <section id="articles" aria-labelledby="list-heading">
-        <div class="list-header"><h1 id="list-heading">記事一覧</h1><label class="theme-label">テーマ<select id="theme-select"><option value="all">すべて</option><option value="work">AIと仕事</option><option value="life">人間と暮らし</option><option value="society">社会と未来</option><option value="experiment">技術を試す</option></select></label></div>
-        <p class="visually-hidden" id="filter-status" role="status" aria-live="polite"></p>
-        <div class="article-list"><!--ARTICLE_CARDS--></div>
-      </section>
-      <p class="editorial-note">同内容の別媒体掲載をまとめています。日付は最初の公開日（日本時間）、掲載元はnote、X、Qiitaの順です。紹介文は編集要約です。</p>
-    </main>
+    <main id="main-content">{{MAIN_CONTENT}}</main>
     <footer><span>konaito</span><a href="#top">先頭へ戻る</a></footer>
   </div>
 </body>

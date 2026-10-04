@@ -1,0 +1,8 @@
+{
+  "name": "konaito-social-cards",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": { "generate": "node generate.mjs", "test": "node --test test/*.test.mjs" },
+  "dependencies": { "@napi-rs/canvas": "1.0.10", "budoux": "0.9.3" }
+}

@@ -16,7 +16,7 @@ export function prepareArticles(input) {
   const ids = new Set();
   const urls = new Set();
   return input.map(article => {
-    if (!article.id || ids.has(article.id)) throw new Error(`Duplicate or missing article id: ${article.id}`);
+    if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(article.id || '') || ids.has(article.id)) throw new Error(`Duplicate or missing article id: ${article.id}`);
     ids.add(article.id);
     if (!article.title || !article.summary || !['work','life','society','experiment'].includes(article.theme)) throw new Error(`Incomplete content entry or unknown theme: ${article.id}`);
     if (!Array.isArray(article.sources) || !article.sources.length) throw new Error(`Missing provenance: ${article.id}`);

@@ -1,0 +1,504 @@
+{
+  "version": 1,
+  "width": 1200,
+  "height": 630,
+  "format": "png",
+  "font": {
+    "family": "Noto Sans CJK JP",
+    "regularSha256": "b76b0433203017ca80401b2ee0dd69350349871c4b19d504c34dbdd80541690a",
+    "boldSha256": "faa5f3656a78b2e2d450d27fe8382c778bc2b6bb5ea29c986664a6a435056ceb"
+  },
+  "articles": {
+    "capitalism-socialism": {
+      "title": "AIは資本主義と社会主義の勝敗を決めるのか",
+      "lines": [
+        "AIは資本主義と社会主義の",
+        "勝敗を決めるのか"
+      ],
+      "fontSize": 78,
+      "lineHeight": 102.96000000000001,
+      "layoutSource": "manual",
+      "emergencyBreaks": 0,
+      "maxLineWidth": 933.739990234375,
+      "bytes": 58462,
+      "sha256": "db8f35069c4fceb0882d446800bfa46a92bbeea1883b10b4c35c9f44ea39ad56",
+      "imageAlt": "AIは資本主義と社会主義の勝敗を決めるのか — konaito.com"
+    },
+    "love-or-money": {
+      "title": "愛か金かはAIにも決められる。人間に残される仕事",
+      "lines": [
+        "愛か金かはAIにも決められる。",
+        "人間に残される仕事"
+      ],
+      "fontSize": 74,
+      "lineHeight": 97.68,
+      "layoutSource": "manual",
+      "emergencyBreaks": 0,
+      "maxLineWidth": 1030.8900146484375,
+      "bytes": 60127,
+      "sha256": "503489409d5233a32c1385bbf55e2679efb897110bcc6dedbfa6b89be555ed42",
+      "imageAlt": "愛か金かはAIにも決められる。人間に残される仕事 — konaito.com"
+    },
+    "love": {
+      "title": "愛を伝えるだとか",
+      "lines": [
+        "愛を伝えるだとか"
+      ],
+      "fontSize": 78,
+      "lineHeight": 102.96000000000001,
+      "layoutSource": "manual",
+      "emergencyBreaks": 0,
+      "maxLineWidth": 621.6599731445312,
+      "bytes": 35387,
+      "sha256": "7daf9a61d75ff89d3a00a7efb0700490237e8b230cc822d5ba61af933cc1f1c8",
+      "imageAlt": "愛を伝えるだとか — konaito.com"
+    },
+    "chiikawa": {
+      "title": "シンギュラリティ後の世界は、ちいかわ",
+      "lines": [
+        "シンギュラリティ後の世界は、",
+        "ちいかわ"
+      ],
+      "fontSize": 74,
+      "lineHeight": 97.68,
+      "layoutSource": "manual",
+      "emergencyBreaks": 0,
+      "maxLineWidth": 1031.56005859375,
+      "bytes": 46553,
+      "sha256": "27bc315ea40915491456391c2950fe79c36b89e9bf686c4d54d97748cf540c8b",
+      "imageAlt": "シンギュラリティ後の世界は、ちいかわ — konaito.com"
+    },
+    "fde-chat-api": {
+      "title": "FDEが作る成果物は、ChatAPIであるべきだ",
+      "lines": [
+        "FDEが作る成果物は、",
+        "ChatAPIであるべきだ"
+      ],
+      "fontSize": 78,
+      "lineHeight": 102.96000000000001,
+      "layoutSource": "manual",
+      "emergencyBreaks": 0,
+      "maxLineWidth": 773.530029296875,
+      "bytes": 57700,
+      "sha256": "e68daae832b03cba296f886a22d2018c9a7f06313e92dd31e62d4a1692605e2a",
+      "imageAlt": "FDEが作る成果物は、ChatAPIであるべきだ — konaito.com"
+    },
+    "friction": {
+      "title": "動摩擦が0になった世界-人間は摩擦になる-",
+      "lines": [
+        "動摩擦が0になった世界",
+        "-人間は摩擦になる-"
+      ],
+      "fontSize": 78,
+      "lineHeight": 102.96000000000001,
+      "layoutSource": "manual",
+      "emergencyBreaks": 0,
+      "maxLineWidth": 826.02001953125,
+      "bytes": 55714,
+      "sha256": "b5a09ee78d7504b94a1fe69c48216728b4a601906685ed482599ae6e9dedc375",
+      "imageAlt": "動摩擦が0になった世界-人間は摩擦になる- — konaito.com"
+    },
+    "seeing": {
+      "title": "「考える」なんてAIにやらせろ、人間の仕事は「見る」ことだ",
+      "lines": [
+        "「考える」なんてAIにやらせろ、",
+        "人間の仕事は「見る」ことだ"
+      ],
+      "fontSize": 69,
+      "lineHeight": 91.08,
+      "layoutSource": "manual",
+      "emergencyBreaks": 0,
+      "maxLineWidth": 1026.0999755859375,
+      "bytes": 54423,
+      "sha256": "16e20e87e2c5de79059b86feb1528a6aa2754e040e32c021c07fb8074a78d303",
+      "imageAlt": "「考える」なんてAIにやらせろ、人間の仕事は「見る」ことだ — konaito.com"
+    },
+    "agi-assimilation": {
+      "title": "AGIという死滅回遊後の「同化」〜サム・アルトマン＝夏油傑・羂索、ダリオ・アモデイ＝九十九由基、イーロン・マスク＝五条悟〜",
+      "lines": [
+        "AGIという死滅回遊後の「同化」",
+        "〜サム・アルトマン＝夏油傑・羂索、",
+        "ダリオ・アモデイ＝九十九由基、",
+        "イーロン・マスク＝五条悟〜"
+      ],
+      "fontSize": 60,
+      "lineHeight": 79.2,
+      "layoutSource": "manual",
+      "emergencyBreaks": 0,
+      "maxLineWidth": 1018.2000122070312,
+      "bytes": 80916,
+      "sha256": "82fe3b40ebb127d63ca0a3101a11826fb0cd08068af84139fde8b4f745eeb201",
+      "imageAlt": "AGIという死滅回遊後の「同化」〜サム・アルトマン＝夏油傑・羂索、ダリオ・アモデイ＝九十九由基、イーロン・マスク＝五条悟〜 — konaito.com"
+    },
+    "agi-pill": {
+      "title": "今のうちに絶望しておこう、AGIピル",
+      "lines": [
+        "今のうちに絶望しておこう、",
+        "AGIピル"
+      ],
+      "fontSize": 78,
+      "lineHeight": 102.96000000000001,
+      "layoutSource": "manual",
+      "emergencyBreaks": 0,
+      "maxLineWidth": 1009.3200073242188,
+      "bytes": 46008,
+      "sha256": "c121774d7f0b9012f843d2215fc35c55621f4c1b9c6641a57cb602158e1db0ab",
+      "imageAlt": "今のうちに絶望しておこう、AGIピル — konaito.com"
+    },
+    "friends": {
+      "title": "友達ショート — 制作コスト0の世界で、私たちは何を失うのか",
+      "lines": [
+        "友達ショート —",
+        "制作コスト0の世界で、",
+        "私たちは何を失うのか"
+      ],
+      "fontSize": 78,
+      "lineHeight": 102.96000000000001,
+      "layoutSource": "manual",
+      "emergencyBreaks": 0,
+      "maxLineWidth": 822.9000244140625,
+      "bytes": 60883,
+      "sha256": "a4ed50a2605fb29cd9a5b8e0748083f5c8c72264130b206b43ce77df902c118d",
+      "imageAlt": "友達ショート — 制作コスト0の世界で、私たちは何を失うのか — konaito.com"
+    },
+    "last-effort": {
+      "title": "AGI前にする、人生最後の努力",
+      "lines": [
+        "AGI前にする、",
+        "人生最後の努力"
+      ],
+      "fontSize": 78,
+      "lineHeight": 102.96000000000001,
+      "layoutSource": "manual",
+      "emergencyBreaks": 0,
+      "maxLineWidth": 546,
+      "bytes": 43397,
+      "sha256": "7da3c6150f9fef4edea4d840fa7ac1311a46de3a8fe82915d10f390388b14d3a",
+      "imageAlt": "AGI前にする、人生最後の努力 — konaito.com"
+    },
+    "genius-hermit-original": {
+      "title": "仙人と天才",
+      "lines": [
+        "仙人と天才"
+      ],
+      "fontSize": 78,
+      "lineHeight": 102.96000000000001,
+      "layoutSource": "manual",
+      "emergencyBreaks": 0,
+      "maxLineWidth": 390,
+      "bytes": 23151,
+      "sha256": "6d32c995a7f660806c0ab302803dde0ab173f7e367397c36a6e25cb915ccaa00",
+      "imageAlt": "仙人と天才 — konaito.com"
+    },
+    "new-multitasking": {
+      "title": "シン・多動力 -ADHDがAIエージェント時代を生きるための教科書-",
+      "lines": [
+        "シン・多動力",
+        "-ADHDがAIエージェント時代を",
+        "生きるための教科書-"
+      ],
+      "fontSize": 72,
+      "lineHeight": 95.04,
+      "layoutSource": "manual",
+      "emergencyBreaks": 0,
+      "maxLineWidth": 1018.5800170898438,
+      "bytes": 63604,
+      "sha256": "81e7daaca55e49d1f56f3b58d10bb76f85012da851a334fc654af2a492287339",
+      "imageAlt": "シン・多動力 -ADHDがAIエージェント時代を生きるための教科書- — konaito.com"
+    },
+    "exponential-ai": {
+      "title": "AIの「指数関数的進化」は、LINEのネットワーク効果とは別次元だ",
+      "lines": [
+        "AIの「指数関数的進化」は、",
+        "LINEのネットワーク効果とは",
+        "別次元だ"
+      ],
+      "fontSize": 77,
+      "lineHeight": 101.64,
+      "layoutSource": "manual",
+      "emergencyBreaks": 0,
+      "maxLineWidth": 1021.9400024414062,
+      "bytes": 65905,
+      "sha256": "93f4b08d148d3a2e6924cf6dff5c51899871554ec13bcc021676c337378a2726",
+      "imageAlt": "AIの「指数関数的進化」は、LINEのネットワーク効果とは別次元だ — konaito.com"
+    },
+    "agents-state": {
+      "title": "生成AIとAIエージェントの違い #OpenClaw #moltbook",
+      "lines": [
+        "生成AIとAIエージェントの違い",
+        "#OpenClaw #moltbook"
+      ],
+      "fontSize": 74,
+      "lineHeight": 97.68,
+      "layoutSource": "manual",
+      "emergencyBreaks": 0,
+      "maxLineWidth": 1030.22998046875,
+      "bytes": 53786,
+      "sha256": "92bb9a2f015fc07153ad5e86fa64e67efd22da43fdb19d296735e536bb9318a9",
+      "imageAlt": "生成AIとAIエージェントの違い #OpenClaw #moltbook — konaito.com"
+    },
+    "complex-society": {
+      "title": "複雑な社会を、複雑なまま捉えよう",
+      "lines": [
+        "複雑な社会を、",
+        "複雑なまま捉えよう"
+      ],
+      "fontSize": 78,
+      "lineHeight": 102.96000000000001,
+      "layoutSource": "manual",
+      "emergencyBreaks": 0,
+      "maxLineWidth": 702,
+      "bytes": 48354,
+      "sha256": "40c845cb00a63656dc1579b5f764856b067211876cf1df8d6f6de47b00ff82ea",
+      "imageAlt": "複雑な社会を、複雑なまま捉えよう — konaito.com"
+    },
+    "genius-hermit": {
+      "title": "仙人と天才 v2",
+      "lines": [
+        "仙人と天才 v2"
+      ],
+      "fontSize": 78,
+      "lineHeight": 102.96000000000001,
+      "layoutSource": "manual",
+      "emergencyBreaks": 0,
+      "maxLineWidth": 498.6499938964844,
+      "bytes": 25630,
+      "sha256": "34bb951faa59997dad2b4ddd654fa9bbdd4140bc3787bb19f6fde9cd22f96e32",
+      "imageAlt": "仙人と天才 v2 — konaito.com"
+    },
+    "communication-redefined": {
+      "title": "コミュニケーションの再定義——SaaSからエージェントへ、クラウドワークスからMoltworkへ",
+      "lines": [
+        "コミュニケーションの再定義",
+        "——SaaSからエージェントへ、",
+        "クラウドワークスからMoltworkへ"
+      ],
+      "fontSize": 65,
+      "lineHeight": 85.8,
+      "layoutSource": "manual",
+      "emergencyBreaks": 0,
+      "maxLineWidth": 1020.8900146484375,
+      "bytes": 64770,
+      "sha256": "ec5879ce417b0e1cc5b61c43d3ff94d7004b5304f3c7ecea38bd208f259d3ed5",
+      "imageAlt": "コミュニケーションの再定義——SaaSからエージェントへ、クラウドワークスからMoltworkへ — konaito.com"
+    },
+    "exchange": {
+      "title": "何でもするから飯をくれ——交換の席がなくなる世界で",
+      "lines": [
+        "何でもするから飯をくれ",
+        "——交換の席がなくなる世界で"
+      ],
+      "fontSize": 75,
+      "lineHeight": 99,
+      "layoutSource": "manual",
+      "emergencyBreaks": 0,
+      "maxLineWidth": 1027.6500244140625,
+      "bytes": 61462,
+      "sha256": "12a715eafc7454fe2e2e33071e57db4f401e91f54dd309a774acfb7c4201f60f",
+      "imageAlt": "何でもするから飯をくれ——交換の席がなくなる世界で — konaito.com"
+    },
+    "new-graduates": {
+      "title": "AIが奪う「新卒の仕事」──アメリカの警告は、日本の未来か？",
+      "lines": [
+        "AIが奪う「新卒の仕事」",
+        "──アメリカの警告は、",
+        "日本の未来か？"
+      ],
+      "fontSize": 78,
+      "lineHeight": 102.96000000000001,
+      "layoutSource": "manual",
+      "emergencyBreaks": 0,
+      "maxLineWidth": 855.739990234375,
+      "bytes": 60091,
+      "sha256": "34d7eefd108283522ac5d84f32390845088a90e09351d3e3a5f10c7502b457be",
+      "imageAlt": "AIが奪う「新卒の仕事」──アメリカの警告は、日本の未来か？ — konaito.com"
+    },
+    "desired-jobs": {
+      "title": "みんなのやりたい仕事の未来 #学歴 #品質スタンプ #運 #責任",
+      "lines": [
+        "みんなのやりたい仕事の未来",
+        "#学歴 #品質スタンプ #運 #責任"
+      ],
+      "fontSize": 73,
+      "lineHeight": 96.36,
+      "layoutSource": "manual",
+      "emergencyBreaks": 0,
+      "maxLineWidth": 1022.7999877929688,
+      "bytes": 57156,
+      "sha256": "e238d6b554a7c35157fb37d482cad8c25d07770ef15a9588178e4db95af24257",
+      "imageAlt": "みんなのやりたい仕事の未来 #学歴 #品質スタンプ #運 #責任 — konaito.com"
+    },
+    "twenties-forties": {
+      "title": "20代はおしまい，40代ははじまり -AI時代への絶望-",
+      "lines": [
+        "20代はおしまい，40代ははじまり",
+        "-AI時代への絶望-"
+      ],
+      "fontSize": 67,
+      "lineHeight": 88.44,
+      "layoutSource": "manual",
+      "emergencyBreaks": 0,
+      "maxLineWidth": 1029.1199951171875,
+      "bytes": 46108,
+      "sha256": "93582a201bc3d1cd1fd523b82f87c7b398282bca6848a66c1b4867004cdd92a3",
+      "imageAlt": "20代はおしまい，40代ははじまり -AI時代への絶望- — konaito.com"
+    },
+    "how-we-live": {
+      "title": "AIによりプログラミングというスキルが陳腐化されていくこの世界で「僕たちはどう生きるか」",
+      "lines": [
+        "AIによりプログラミングという",
+        "スキルが陳腐化されていくこの世界で",
+        "「僕たちはどう生きるか」"
+      ],
+      "fontSize": 60,
+      "lineHeight": 79.2,
+      "layoutSource": "manual",
+      "emergencyBreaks": 0,
+      "maxLineWidth": 1018.2000122070312,
+      "bytes": 73686,
+      "sha256": "7546a04dd0a7b8cbfe68dfcdbb4ed2e0789fbcaa094b45be384e3a2a2ce8b19b",
+      "imageAlt": "AIによりプログラミングというスキルが陳腐化されていくこの世界で「僕たちはどう生きるか」 — konaito.com"
+    },
+    "hacking": {
+      "title": "日本企業「ハッキングされないでくれ」ランキング",
+      "lines": [
+        "日本企業",
+        "「ハッキングされないでくれ」",
+        "ランキング"
+      ],
+      "fontSize": 74,
+      "lineHeight": 97.68,
+      "layoutSource": "manual",
+      "emergencyBreaks": 0,
+      "maxLineWidth": 1031.56005859375,
+      "bytes": 53828,
+      "sha256": "42d2af64f8f41c94deb01a7db410a64c20fc4c58fc9c51d39d63ed2701d4990f",
+      "imageAlt": "日本企業「ハッキングされないでくれ」ランキング — konaito.com"
+    },
+    "jev-definer": {
+      "title": "Jevは「判断するAI」そのものになれるか？Decisions APIとDiffusionGemmaが突きつける問い",
+      "lines": [
+        "Jevは「判断するAI」",
+        "そのものになれるか？",
+        "Decisions APIとDiffusionGemmaが",
+        "突きつける問い"
+      ],
+      "fontSize": 61,
+      "lineHeight": 80.52000000000001,
+      "layoutSource": "manual",
+      "emergencyBreaks": 0,
+      "maxLineWidth": 1025.4100341796875,
+      "bytes": 76757,
+      "sha256": "e991ae6320bb78bfb90d9b74f8abb094b185422b1015eb0d6ac4eba793058452",
+      "imageAlt": "Jevは「判断するAI」そのものになれるか？Decisions APIとDiffusionGemmaが突きつける問い — konaito.com"
+    },
+    "knowledge-space": {
+      "title": "AIエージェントに「事前知識」を与える — コンテキスト圧縮に耐える知識空間の設計",
+      "lines": [
+        "AIエージェントに「事前知識」を与える",
+        "— コンテキスト圧縮に耐える",
+        "知識空間の設計"
+      ],
+      "fontSize": 57,
+      "lineHeight": 75.24000000000001,
+      "layoutSource": "manual",
+      "emergencyBreaks": 0,
+      "maxLineWidth": 1021.5,
+      "bytes": 59655,
+      "sha256": "4cdec1c50e67bb4bff3207335d22bce95add5447f0db690be2293bb4e4362f9d",
+      "imageAlt": "AIエージェントに「事前知識」を与える — コンテキスト圧縮に耐える知識空間の設計 — konaito.com"
+    },
+    "web2md": {
+      "title": "Webページを高品質なMarkdownに変換するサービス「Web2MD」β版リリース",
+      "lines": [
+        "Webページを高品質な",
+        "Markdownに変換するサービス",
+        "「Web2MD」β版リリース"
+      ],
+      "fontSize": 72,
+      "lineHeight": 95.04,
+      "layoutSource": "manual",
+      "emergencyBreaks": 0,
+      "maxLineWidth": 1023.9099731445312,
+      "bytes": 73044,
+      "sha256": "6c442fd284fd6e9471ff6b115d04834fb03b1d7dd6e0711d19ce901896810008",
+      "imageAlt": "Webページを高品質なMarkdownに変換するサービス「Web2MD」β版リリース — konaito.com"
+    },
+    "supabase-docker": {
+      "title": "DockerでのSupabaseのローカル環境構築",
+      "lines": [
+        "DockerでのSupabaseの",
+        "ローカル環境構築"
+      ],
+      "fontSize": 78,
+      "lineHeight": 102.96000000000001,
+      "layoutSource": "manual",
+      "emergencyBreaks": 0,
+      "maxLineWidth": 876.5599975585938,
+      "bytes": 52146,
+      "sha256": "44c021da02108615bed0d737caba2e6d77bb461bbaeb9528afc47ac976952c8d",
+      "imageAlt": "DockerでのSupabaseのローカル環境構築 — konaito.com"
+    },
+    "pokemon-onchain": {
+      "title": "もし『Pokémon Trading Card Game Pocket（ポケポケ）』がオンチェーン化されたら？",
+      "lines": [
+        "もし『Pokémon Trading Card Game",
+        "Pocket（ポケポケ）』が",
+        "オンチェーン化されたら？"
+      ],
+      "fontSize": 59,
+      "lineHeight": 77.88000000000001,
+      "layoutSource": "manual",
+      "emergencyBreaks": 0,
+      "maxLineWidth": 1018.4600219726562,
+      "bytes": 59476,
+      "sha256": "f942b83a44f28da3582004ca8559f0e711935c0db930f5720c5c0858294a270d",
+      "imageAlt": "もし『Pokémon Trading Card Game Pocket（ポケポケ）』がオンチェーン化されたら？ — konaito.com"
+    },
+    "bun-nextjs-docker": {
+      "title": "Bunで構築したNext.jsアプリケーションをDockerで立ち上げる",
+      "lines": [
+        "Bunで構築した",
+        "Next.jsアプリケーションを",
+        "Dockerで立ち上げる"
+      ],
+      "fontSize": 78,
+      "lineHeight": 102.96000000000001,
+      "layoutSource": "manual",
+      "emergencyBreaks": 0,
+      "maxLineWidth": 967.3599853515625,
+      "bytes": 66328,
+      "sha256": "80e77329bec6c38afd890ffabc16840c2729dd23655c29b79757d8ca27f79f78",
+      "imageAlt": "Bunで構築したNext.jsアプリケーションをDockerで立ち上げる — konaito.com"
+    },
+    "build-working-app": {
+      "title": "とりあえず動くアプリを作る方法",
+      "lines": [
+        "とりあえず動くアプリを",
+        "作る方法"
+      ],
+      "fontSize": 78,
+      "lineHeight": 102.96000000000001,
+      "layoutSource": "manual",
+      "emergencyBreaks": 0,
+      "maxLineWidth": 858,
+      "bytes": 47115,
+      "sha256": "0e3c4c108ff9dae8531dca346d59ebb150b153b455f91715df58e2954d96e924",
+      "imageAlt": "とりあえず動くアプリを作る方法 — konaito.com"
+    }
+  },
+  "index": {
+    "title": "konaitoの文章",
+    "lines": [
+      "konaitoの文章"
+    ],
+    "fontSize": 78,
+    "lineHeight": 102.96000000000001,
+    "layoutSource": "manual",
+    "emergencyBreaks": 0,
+    "maxLineWidth": 527.6699829101562,
+    "bytes": 25605,
+    "sha256": "05f3eca95fe211189d7f5719942294fca69dc52d97105e74b5dcea65af8f8831",
+    "imageAlt": "konaitoの文章 — konaito.com"
+  }
+}

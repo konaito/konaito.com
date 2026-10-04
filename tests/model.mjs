@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {prepareArticles} from '../article-model.mjs';
+const input=JSON.parse(fs.readFileSync(new URL('../articles.json',import.meta.url),'utf8'));
+const good=prepareArticles(input);
+const mutate=fn=>{const data=structuredClone(input);fn(data);return data;};
+assert.equal(good.length,31);
+assert.equal(good.flatMap(a=>a.sources).length,45);
+assert.equal(good.find(a=>a.id==='last-effort').earliestPublishedAt,'2026-03-11');
+assert.ok(good.some(a=>a.id==='genius-hermit-original')&&good.some(a=>a.id==='genius-hermit'),'Different same-platform editions remain separate');
+assert.throws(()=>prepareArticles(mutate(a=>a[0].id='../unsafe')),/article id/);
+assert.throws(()=>prepareArticles(mutate(a=>a[0].sources[0].url='http://x.com/test')),/Non-HTTPS/);
+assert.throws(()=>prepareArticles(mutate(a=>a[0].earliestPublishedAt='2000-01-01')),/Earliest publication mismatch/);
+assert.throws(()=>prepareArticles(mutate(a=>a[0].sources[0].publishedAt='2020-01-01')),/normalized to JST/);
+console.log('Article model regression checks passed.');

@@ -13,3 +13,5 @@
 
 .balanced-title{word-break:keep-all;overflow-wrap:anywhere;line-break:strict;text-wrap:pretty}
 .article-body .source-paragraph{margin:1.25em 0}.article-body .source-paragraph:empty{display:none}
+
+.article-body .source-paragraph div,.article-body h2 div,.article-body h3 div,.article-body li div,.article-body blockquote div{display:contents}

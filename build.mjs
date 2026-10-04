@@ -4,6 +4,7 @@ import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { prepareArticles } from './article-model.mjs';
 import { readArticleContent } from './content-model.mjs';
+import { formatArticleBody } from './article-format.mjs';
 const root=path.dirname(fileURLToPath(import.meta.url));
 const read=name=>fs.readFileSync(path.join(root,name),'utf8');
 const config=JSON.parse(read('site.config.json'));
@@ -76,7 +77,7 @@ for(const a of readableArticles){
   const preferredPlatform=a.sources.find(s=>s.url===source).platform;
   const content=`<nav class="breadcrumbs" aria-label="パンくず"><a href="${local('')}">記事一覧</a><span aria-hidden="true"> / </span><span>${themeNames[a.theme]}</span></nav>
 <article class="reading-page"><header class="article-header"><p class="eyebrow">${themeNames[a.theme]}</p><h1 class="balanced-title">${titleHTML(a)}</h1><p class="publication"><a href="https://konaito.github.io/" rel="author">konaito</a><span aria-hidden="true"> · </span>初出 <time datetime="${a.earliestPublishedAt}">${date(a.earliestPublishedAt)}</time></p><p class="source-edition"><a href="${esc(source)}">${preferredPlatform}掲載版</a>の本文を収録</p></header>
-${toc}<div class="article-body">${body.html}</div>
+${toc}<div class="article-body">${formatArticleBody(body)}</div>
 <section class="article-provenance" aria-labelledby="sources"><h2 id="sources">掲載元</h2><ul class="publication-sources">${sourceList}</ul><p class="summary-note">初出・各掲載版の日付は日本時間です。このサイトへの本文掲載：<time datetime="${esc(config.articlePublicationDate)}">${date(config.articlePublicationDate)}</time>。本文は取得時点の掲載版です。原文の段落・見出しをもとに表示し、外部プレーヤーなどの埋め込みは掲載元へのリンクで案内しています。</p></section>
 <section class="related-section" aria-labelledby="related"><h2 id="related">あわせて読む</h2><ul class="related-reading">${related}</ul></section><p class="back-link"><a href="${local('')}#${a.id}">記事一覧に戻る</a><a href="#top">先頭へ戻る</a></p></article>`;
   const graph=[person,website,{'@type':'WebPage','@id':absolute(relative)+'#page',url:absolute(relative),name:pageTitle,description,inLanguage:'ja',isPartOf:{'@id':website['@id']},mainEntity:{'@id':absolute(relative)+'#article'},breadcrumb:{'@id':absolute(relative)+'#breadcrumb'}},{'@type':'Article','@id':absolute(relative)+'#article',headline:a.title,description,inLanguage:'ja',mainEntityOfPage:{'@id':absolute(relative)+'#page'},author:{'@id':person['@id']},publisher:{'@id':person['@id']},datePublished:config.articlePublicationDate,isBasedOn:source,citation:a.sources.map(s=>s.url),...(fs.existsSync(path.join(root,'assets',`og/${a.id}.png`))?{image:[assetURL(`og/${a.id}.png`)]}:{})},{'@type':'BreadcrumbList','@id':absolute(relative)+'#breadcrumb',itemListElement:[{'@type':'ListItem',position:1,name:'記事一覧',item:siteUrl},{'@type':'ListItem',position:2,name:a.title,item:absolute(relative)}]}];
@@ -88,6 +89,7 @@ fs.mkdirSync(dist,{recursive:true});
 if(fs.existsSync(path.join(root,'assets','og')))fs.cpSync(path.join(root,'assets','og'),path.join(dist,'og'),{recursive:true});
 if(fs.existsSync(path.join(root,'assets','media')))fs.cpSync(path.join(root,'assets','media'),path.join(dist,'media'),{recursive:true});
 for(const name of ['style.css','script.js'])fs.copyFileSync(path.join(root,'assets',name),path.join(dist,name));
+fs.cpSync(path.join(root,'assets/fonts'),path.join(dist,'fonts'),{recursive:true});
 for(const page of pages){const target=path.join(dist,page.relative,'index.html');fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,page.html);}
 fs.writeFileSync(path.join(dist,'.nojekyll'),'');
 fs.writeFileSync(path.join(dist,'404.html'),render({title:'ページが見つかりません | konaito',description:'指定されたページは見つかりませんでした。記事一覧から文章を探せます。',relative:'404.html',notFound:true,content:`<section class="reading-page"><h1>ページが見つかりません</h1><p>URLが変わったか、存在しないページです。</p><p class="back-link"><a href="${local('')}">記事一覧へ戻る</a></p></section>`}));

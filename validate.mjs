@@ -47,3 +47,4 @@ validateSEO();
 await import('./tests/model.mjs');
 const {validateSocialAssets}=await import('./tests/social-assets.mjs');
 validateSocialAssets();
+await import('./tests/article-format.mjs');

@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import assert from 'node:assert/strict';
 import {readArticleContent} from '../content-model.mjs';
+import {formatArticleBody} from '../article-format.mjs';
 import {fileURLToPath} from 'node:url';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=name=>fs.readFileSync(path.join(root,name),'utf8');
@@ -78,7 +79,7 @@ export function validateSEO(){
     const body=bodies.find(b=>b.id===article.id);assert.ok(body?.html&&body.textLength>0,'Full article content present');
     const html=pages.get(`articles/${article.id}/index.html`);
     assert.ok(!/<(?:script|style|iframe|form|svg)\b/i.test(body.html),`${article.id}: body has no executable or embedded markup`);
-    assert.ok(html.includes(`<div class="article-body">${body.html}</div>`),`${article.id}: complete body rendered without truncation`);
+    assert.ok(html.includes(`<div class="article-body">${formatArticleBody(body)}</div>`),`${article.id}: complete body rendered without truncation`);
     for(const heading of body.toc||[])assert.ok(body.html.includes(`id="${heading.id}"`),`${article.id}: TOC heading ID exists`);
     assert.ok(pages.get('index.html').includes(`href="${new URL(`articles/${article.id}/`,base).pathname}"`),'Home links to every article');
   }

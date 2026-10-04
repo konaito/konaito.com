@@ -20,6 +20,7 @@ python3 -m http.server 8080 --directory dist
 - 検証済み本文・目次: `content/*.json`
 - 本文取り込み: `scripts/import-article-bodies.py`（Python標準ライブラリのみ）
 - 共通レイアウト: `template.html`
+- 原文を変えない表示補正: `article-format.mjs`（X本文の改行、文字図、確認済みの数式記法）
 - トップページ: `template-index.html`
 - スタイル・絞り込み: `assets/style.css` / `assets/script.js`
 - 正規URL・検索設定: `site.config.json`
@@ -46,6 +47,10 @@ python3 -m http.server 8080 --directory dist
 記事の見出しは、このサイトの本文ページ `/articles/<id>/` へつながります。本文の収録対象は31作品です。各本文は、掲載元の優先順位（note → X → Qiita）に沿って選んだ公開版を収録します。別媒体の掲載先も残しています。一覧の紹介文は短い編集要約で、本文の代わりには使いません。
 
 本文はHTMLとして事前生成されるので、JavaScriptを無効にしても読めます。目次、段落、見出し、リスト、引用、コード、表、画像を表示します。埋め込みプレーヤーはリンクに置き換え、第三者の実行スクリプトは読み込みません。
+
+文字による図は改行・空白を保持し、半角と日本語が1:2になる小さな同梱フォントで表示します。画面より広い図やコードは、その枠の中だけ横にスクロールできます。`content/` の取得原文は変更せず、目視確認済みの2図のみ罫線と余白を整えています。原文が変わるとハッシュ照合が外れ、古い図への置換はされません。`tests/article-format.mjs` は全31本で文言・数値・ラベルの保持を検証します。
+
+文字図フォントはNoto Sans Mono / Noto Sans Mono CJK JPの使用文字サブセットです。OFLと著作権表示は `assets/fonts/` に同梱し、外部フォントサービスには接続しません。再生成用の任意スクリプトは `tools/build-diagram-fonts.py`（Python fontToolsとOSの公式Notoフォントが必要）。通常ビルドでは実行不要です。CSSの `size-adjust` でLatin 600-unitを500-unitへ揃え、日本語1000-unitと組み合わせています。
 
 初出の日付と、このサイトへの本文掲載日は区別します。`site.config.json` の `articlePublicationDate` は実際の収録日です。構造化データの `datePublished` にはこのサイトでの掲載日を使い、元記事は `isBasedOn` と掲載元リンクで示します。元媒体のcanonical設定は変更していません。
 削除・非公開・下書きの記事や、公開元で確認できない本文履歴は収録対象外です。

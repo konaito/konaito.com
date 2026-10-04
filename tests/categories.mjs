@@ -39,10 +39,14 @@ for(const [category,label] of Object.entries(categoryNames)){
 state.value='all';state.selectedOptions[0].textContent='すべて';state.change();
 assert.equal(rows.filter(row=>!row.hidden).length,31);
 assert.ok(status.textContent.includes('31本'));
-// Category point colors retain at least 4.5:1 contrast against the white plot.
+// Pastel fills stay light; their thin colored boundaries provide 3:1 contrast on white.
 for(const genre of Object.values(publicationGenres)){
-  const rgb=genre.color.slice(1).match(/../g).map(value=>parseInt(value,16)/255).map(value=>value<=.04045?value/12.92:((value+.055)/1.055)**2.4);
-  const luminance=rgb[0]*.2126+rgb[1]*.7152+rgb[2]*.0722;
-  assert.ok(1.05/(luminance+.05)>=4.5);
+  const luminance=hex=>{
+    const rgb=hex.slice(1).match(/../g).map(value=>parseInt(value,16)/255).map(value=>value<=.04045?value/12.92:((value+.055)/1.055)**2.4);
+    return rgb[0]*.2126+rgb[1]*.7152+rgb[2]*.0722;
+  };
+  assert.ok(luminance(genre.color)>.35,'Category fills remain visibly pastel');
+  assert.ok(1.05/(luminance(genre.outline)+.05)>=3,'Colored point boundaries retain contrast');
+  assert.ok(html.includes(`--publication-outline:${genre.outline}`));
 }
 console.log('Categories: all 31 list labels and primary dot colors agree; every category filter and reset, validation errors, and color contrast passed.');

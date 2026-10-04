@@ -23,7 +23,7 @@ assert.ok(rendered.includes(html));
 assert.equal([...html.matchAll(/data-publication-point\b/g)].length,31);
 assert.equal([...html.matchAll(/tabindex="0"/g)].length,1);
 assert.ok(html.includes('role="tooltip" hidden'));
-const coordinates=[...html.matchAll(/style="left:([\d.]+)%;top:([\d.]+)%;--publication-color:#[a-f0-9]+" data-publication-point/g)].map(match=>[Number(match[1]),Number(match[2])]);
+const coordinates=[...html.matchAll(/style="left:([\d.]+)%;top:([\d.]+)%;--publication-color:#[a-f0-9]+;--publication-outline:#[a-f0-9]+" data-publication-point/g)].map(match=>[Number(match[1]),Number(match[2])]);
 assert.equal(coordinates.length,31);
 for(const [index,[x,y]] of coordinates.entries()){
   assert.ok(Math.abs(x-(series[index].timestamp-series[0].timestamp)/(series.at(-1).timestamp-series[0].timestamp)*100)<.000001,'Horizontal position is proportional to elapsed time');

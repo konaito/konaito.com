@@ -3,10 +3,10 @@ import { jstDate, categoryNames } from './article-model.mjs';
 const escapeHTML = value => String(value).replace(/[&<>"']/g, character => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[character]));
 const percent = value => Number(value.toFixed(6));
 export const publicationGenres = {
-  work: { label: categoryNames.work, color: '#285691' },
-  life: { label: categoryNames.life, color: '#a54c12' },
-  society: { label: categoryNames.society, color: '#75458a' },
-  experiment: { label: categoryNames.experiment, color: '#267052' }
+  work: { label: categoryNames.work, color: '#8bbcf0', outline: '#517eaa' },
+  life: { label: categoryNames.life, color: '#f0a8c0', outline: '#aa617c' },
+  society: { label: categoryNames.society, color: '#c2ace8', outline: '#80669f' },
+  experiment: { label: categoryNames.experiment, color: '#91d3b5', outline: '#4f826b' }
 };
 
 // One point per canonical work, ordered by the earliest verified publication instant.
@@ -45,8 +45,8 @@ export function renderPublicationChart(articles) {
   if (end !== start) dateTicks.push({ timestamp: end, label: points.at(-1).date.slice(0, 7).replace('-', '.'), edge: 'end' });
   const dates = dateTicks.map(tick => `<span class="publication-x-tick ${tick.edge}" style="left:${percent((tick.timestamp - start) / span * 100)}%">${tick.label}</span>`).join('');
   if (points.some(point => !publicationGenres[point.primaryCategory])) throw new Error('Unknown publication chart genre');
-  const legend = Object.entries(publicationGenres).map(([theme, genre]) => `<li><span style="--publication-color:${genre.color}" aria-hidden="true"></span>${genre.label}</li>`).join('');
-  const dots = points.map((point, index) => `<button type="button" class="publication-point" style="left:${point.x}%;top:${point.y}%;--publication-color:${publicationGenres[point.primaryCategory].color}" data-publication-point data-genre="${publicationGenres[point.primaryCategory].label}" data-primary-category="${point.primaryCategory}" data-title="${escapeHTML(point.title)}" data-date="${point.date}" data-ordinal="${point.ordinal}" data-article-id="${escapeHTML(point.id)}" tabindex="${index === 0 ? '0' : '-1'}" aria-label="${point.ordinal}本目、${point.date.replaceAll('-', '.')}、${publicationGenres[point.primaryCategory].label}、${escapeHTML(point.title)}" aria-describedby="publication-chart-help"><span></span></button>`).join('\n');
+  const legend = Object.entries(publicationGenres).map(([theme, genre]) => `<li><span style="--publication-color:${genre.color};--publication-outline:${genre.outline}" aria-hidden="true"></span>${genre.label}</li>`).join('');
+  const dots = points.map((point, index) => `<button type="button" class="publication-point" style="left:${point.x}%;top:${point.y}%;--publication-color:${publicationGenres[point.primaryCategory].color};--publication-outline:${publicationGenres[point.primaryCategory].outline}" data-publication-point data-genre="${publicationGenres[point.primaryCategory].label}" data-primary-category="${point.primaryCategory}" data-title="${escapeHTML(point.title)}" data-date="${point.date}" data-ordinal="${point.ordinal}" data-article-id="${escapeHTML(point.id)}" tabindex="${index === 0 ? '0' : '-1'}" aria-label="${point.ordinal}本目、${point.date.replaceAll('-', '.')}、${publicationGenres[point.primaryCategory].label}、${escapeHTML(point.title)}" aria-describedby="publication-chart-help"><span></span></button>`).join('\n');
   return `<figure class="publication-chart" aria-labelledby="publication-chart-heading">
   <figcaption id="publication-chart-heading">公開の記録<span>${series.length}本</span></figcaption>
   <p class="publication-chart-help" id="publication-chart-help">横軸は初出の時期、縦軸は何本目か。点に触れると作品名を表示します。<span class="visually-hidden">キーボードでは矢印キーで作品を選び、Escapeキーで閉じられます。</span></p>

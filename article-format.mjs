@@ -3,7 +3,8 @@
 import {createHash} from 'node:crypto';
 const escape=s=>s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
 const decode=s=>s.replaceAll('&lt;','<').replaceAll('&gt;','>').replaceAll('&quot;','"').replaceAll('&#39;',"'").replaceAll('&amp;','&');
-export const cellWidth=s=>[...s].reduce((n,c)=>n+(/[\u1100-\u115f\u2e80-\ua4cf\uac00-\ud7a3\uf900-\ufaff\ufe10-\ufe6f\uff01-\uff60\uffe0-\uffe6]/u.test(c)?2:1),0);
+// Noto Sans Mono's left/right filled triangles also occupy two Latin cells.
+export const cellWidth=s=>[...s].reduce((n,c)=>n+(/[◀▶\u1100-\u115f\u2e80-\ua4cf\uac00-\ud7a3\uf900-\ufaff\ufe10-\ufe6f\uff01-\uff60\uffe0-\uffe6]/u.test(c)?2:1),0);
 const pad=(s,n)=>s+' '.repeat(Math.max(0,n-cellWidth(s)));
 
 export function alignReviewedDiagram(text){
@@ -20,7 +21,7 @@ export function alignReviewedDiagram(text){
       const right=line.lastIndexOf('│');
       if(right===4)return line;
       const middle=line.slice(5,right);
-      return '    │'+pad(middle.trimEnd(),31)+'│'+line.slice(right+1);
+      return '    │'+pad(middle.trimEnd(),32)+'│'+line.slice(right+1);
     }).join('\n');
   }
   return text;

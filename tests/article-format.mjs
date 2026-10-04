@@ -19,6 +19,9 @@ const knowledge=formatArticleBody(bodies.find(b=>b.id==='knowledge-space'));
 assert.equal((knowledge.match(/class="text-diagram"/g)||[]).length,4);
 const box=plain(knowledge.match(/<pre class="text-diagram"[^>]*>([\s\S]*?)<\/pre>/)[1]);
 assert.deepEqual([...new Set(box.split('\n').map(cellWidth))],[52],'All outer diagram edges share a column');
+const sequence=[...knowledge.matchAll(/<pre class="text-diagram"[^>]*>([\s\S]*?)<\/pre>/g)].map(m=>plain(m[1])).find(t=>t.startsWith('エージェント'));
+assert.equal(cellWidth('◀▶'),4,'Bundled font triangle advances are two Latin cells');
+for(const line of sequence.split('\n').filter(s=>s.startsWith('    │')&&s.lastIndexOf('│')>4))assert.equal(cellWidth(line.slice(0,line.lastIndexOf('│'))),37,'Sequence arrows and right lifeline share a column');
 const unchanged='unrecognized diagram\n│ text';assert.equal(alignReviewedDiagram(unchanged),unchanged);
 for(const font of JSON.parse(fs.readFileSync(new URL('../assets/fonts/manifest.json',import.meta.url)))){
  const bytes=fs.readFileSync(new URL('../assets/fonts/'+font.file,import.meta.url));

@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { prepareArticles } from './article-model.mjs';
 import { readArticleContent } from './content-model.mjs';
 import { formatArticleBody } from './article-format.mjs';
+import { renderPublicationChart } from './publication-chart.mjs';
 const root=path.dirname(fileURLToPath(import.meta.url));
 const read=name=>fs.readFileSync(path.join(root,name),'utf8');
 const config=JSON.parse(read('site.config.json'));
@@ -61,7 +62,7 @@ function render({title,description,relative='',content,graph=[],notFound=false,s
 }
 const title='konaito | AI・仕事・暮らしの文章と技術の記録';
 const description='内藤剛汰（konaito）がnote・X・Qiitaに掲載した文章の一覧。AIと仕事、人間と暮らし、社会と未来、技術の実験をテーマに、紹介文・初回公開日・各掲載元をまとめています。';
-const homeContent=read('template-index.html').replace('<!--ARTICLE_CARDS-->',rows).replaceAll('{{HOME_PATH}}',esc(local('')));
+const homeContent=read('template-index.html').replace('<!--PUBLICATION_CHART-->',renderPublicationChart(articles)).replace('<!--ARTICLE_CARDS-->',rows).replaceAll('{{HOME_PATH}}',esc(local('')));
 const homeGraph=[person,website,{'@type':'CollectionPage','@id':absolute('#page'),url:siteUrl,name:title,description,inLanguage:'ja',isPartOf:{'@id':website['@id']},about:{'@id':person['@id']},mainEntity:{'@type':'ItemList',numberOfItems:articles.length,itemListElement:articles.map((a,i)=>({'@type':'ListItem',position:i+1,name:a.title,url:bodyById.has(a.id)?absolute(articlePath(a.id)):a.primarySourceUrl}))}}];
 const pages=[{relative:'',html:render({title,description,content:homeContent,graph:homeGraph,script:true})}];
 for(const a of readableArticles){
